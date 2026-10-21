@@ -1,0 +1,681 @@
+fichier,vrai,categorie,source,distracteur,A_pred,A_brute,A_inliers,A_second,A_iou,A_temps_ms,A_zoom,B_pred,B_distance
+0000_100k_Zaire_facile.jpg,100k_Zaire,facile,100k_Zaire,,100k_Zaire,100k_Zaire,628,0,0.9984,375.0,1.0,100k_Zaire,0.4212
+0001_100k_Zaire_facile.jpg,100k_Zaire,facile,100k_Zaire,500k_Zaire,100k_Zaire,100k_Zaire,232,0,0.9958,365.7,1.0,1000_Cruzados,0.8909
+0002_100k_Zaire_facile.jpg,100k_Zaire,facile,100k_Zaire,,100k_Zaire,100k_Zaire,345,0,0.9964,418.8,1.0,100k_Zaire,0.3523
+0003_100k_Zaire_facile.jpg,100k_Zaire,facile,100k_Zaire,,100k_Zaire,100k_Zaire,196,0,0.9983,504.1,1.0,inconnu,0.4069
+0004_100k_Zaire_rotation.jpg,100k_Zaire,rotation,100k_Zaire,,100k_Zaire,100k_Zaire,455,0,0.9973,438.7,1.0,100k_Zaire,0.5864
+0005_100k_Zaire_rotation.jpg,100k_Zaire,rotation,100k_Zaire,,100k_Zaire,100k_Zaire,362,0,0.9935,520.7,1.0,1000_Cruzados,0.606
+0006_100k_Zaire_rotation.jpg,100k_Zaire,rotation,100k_Zaire,,100k_Zaire,100k_Zaire,557,0,0.9969,579.9,1.0,100k_Zaire,0.4416
+0007_100k_Zaire_rotation.jpg,100k_Zaire,rotation,100k_Zaire,,100k_Zaire,100k_Zaire,224,0,0.9897,500.5,1.0,inconnu,0.7562
+0008_100k_Zaire_perspective.jpg,100k_Zaire,perspective,100k_Zaire,10k_Mark,100k_Zaire,100k_Zaire,277,0,0.998,491.6,1.0,1_million_bolivar,0.4271
+0009_100k_Zaire_perspective.jpg,100k_Zaire,perspective,100k_Zaire,,inconnu,inconnu,0,0,,855.8,1.0,100k_Zaire,0.8272
+0010_100k_Zaire_perspective.jpg,100k_Zaire,perspective,100k_Zaire,,100k_Zaire,100k_Zaire,103,0,0.9951,510.9,1.0,1_million_bolivar,0.3732
+0011_100k_Zaire_perspective.jpg,100k_Zaire,perspective,100k_Zaire,,100k_Zaire,100k_Zaire,92,0,0.9916,600.0,1.0,100k_Zaire,0.4708
+0012_100k_Zaire_echelle.jpg,100k_Zaire,echelle,100k_Zaire,F2-5 1_million_B-Pengo,inconnu,1_million_Intis,4,0,,1388.3,2.0,1000_Rouble,0.9464
+0013_100k_Zaire_echelle.jpg,100k_Zaire,echelle,100k_Zaire,,100k_Zaire,100k_Zaire,41,0,0.9783,570.3,1.0,500_Angola,0.5739
+0014_100k_Zaire_echelle.jpg,100k_Zaire,echelle,100k_Zaire,500_millions_zimbabwe,100k_Zaire,100k_Zaire,19,0,0.954,1271.2,2.0,inconnu,0.5609
+0015_100k_Zaire_echelle.jpg,100k_Zaire,echelle,100k_Zaire,F2-7 20k_cheque_ZWD,100k_Zaire,100k_Zaire,51,0,0.9734,942.8,2.0,1000_Cruzados,0.2851
+0016_100k_Zaire_eclairage.jpg,100k_Zaire,eclairage,100k_Zaire,,100k_Zaire,100k_Zaire,529,0,0.9849,483.3,1.0,inconnu,1.249
+0017_100k_Zaire_eclairage.jpg,100k_Zaire,eclairage,100k_Zaire,100_Trillion_Zimbabwe,100k_Zaire,100k_Zaire,463,0,0.9979,383.2,1.0,inconnu,0.8549
+0018_100k_Zaire_eclairage.jpg,100k_Zaire,eclairage,100k_Zaire,,100k_Zaire,100k_Zaire,164,0,0.9914,457.2,1.0,1000_Cruzados,0.5257
+0019_100k_Zaire_eclairage.jpg,100k_Zaire,eclairage,100k_Zaire,,100k_Zaire,100k_Zaire,341,0,0.9982,472.5,1.0,10k_Liban,0.3721
+0020_100k_Zaire_flou.jpg,100k_Zaire,flou,100k_Zaire,,100k_Zaire,100k_Zaire,9,0,0.4237,384.1,1.0,inconnu,0.5153
+0021_100k_Zaire_flou.jpg,100k_Zaire,flou,100k_Zaire,,100k_Zaire,100k_Zaire,94,0,0.9969,447.8,1.0,100_milliards_Drachma,0.8467
+0022_100k_Zaire_flou.jpg,100k_Zaire,flou,100k_Zaire,,100k_Zaire,100k_Zaire,147,0,0.975,530.1,1.0,100k_Zaire,0.4373
+0023_100k_Zaire_flou.jpg,100k_Zaire,flou,100k_Zaire,,100k_Zaire,100k_Zaire,52,0,0.9802,602.5,1.0,inconnu,0.6038
+0024_100k_Zaire_occlusion.jpg,100k_Zaire,occlusion,100k_Zaire,,100k_Zaire,100k_Zaire,61,0,0.9946,441.7,1.0,inconnu,0.6498
+0025_100k_Zaire_occlusion.jpg,100k_Zaire,occlusion,100k_Zaire,,100k_Zaire,100k_Zaire,163,6,0.9946,440.2,1.0,inconnu,0.5246
+0026_100k_Zaire_occlusion.jpg,100k_Zaire,occlusion,100k_Zaire,,100k_Zaire,100k_Zaire,46,0,0.9887,473.9,1.0,inconnu,1.0547
+0027_100k_Zaire_occlusion.jpg,100k_Zaire,occlusion,100k_Zaire,5_milliard_dinar,100k_Zaire,100k_Zaire,229,0,0.9963,506.2,1.0,100k_Zaire,0.4751
+0028_100k_Zaire_froisse.jpg,100k_Zaire,froisse,100k_Zaire,,100k_Zaire,100k_Zaire,34,0,0.9799,595.7,1.0,200k_nicaragua,0.5917
+0029_100k_Zaire_froisse.jpg,100k_Zaire,froisse,100k_Zaire,,100k_Zaire,100k_Zaire,36,5,0.9434,559.0,1.0,100k_Zaire,0.5906
+0030_100k_Zaire_froisse.jpg,100k_Zaire,froisse,100k_Zaire,F2-10 1_ZWR,100k_Zaire,100k_Zaire,18,0,0.8427,1612.2,2.0,1_million_Intis,0.4224
+0031_100k_Zaire_froisse.jpg,100k_Zaire,froisse,100k_Zaire,,100k_Zaire,100k_Zaire,13,0,0.9819,446.9,1.0,1_million_Lira,0.3346
+0032_100k_Zaire_compression.jpg,100k_Zaire,compression,100k_Zaire,F2-5 1_million_B-Pengo,100k_Zaire,100k_Zaire,61,0,0.9889,570.3,1.0,inconnu,0.5489
+0033_100k_Zaire_compression.jpg,100k_Zaire,compression,100k_Zaire,,100k_Zaire,100k_Zaire,55,0,0.9826,535.9,1.0,inconnu,0.4734
+0034_100k_Zaire_compression.jpg,100k_Zaire,compression,100k_Zaire,,100k_Zaire,100k_Zaire,68,0,0.9926,512.0,1.0,500_Angola,0.5048
+0035_100k_Zaire_compression.jpg,100k_Zaire,compression,100k_Zaire,,100k_Zaire,100k_Zaire,235,0,0.992,339.4,1.0,inconnu,0.808
+0036_100_Billion_Zimbabwe_facile.jpg,100_Billion_Zimbabwe,facile,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,78,0,0.9942,544.5,1.0,1_million_Lira,0.793
+0037_100_Billion_Zimbabwe_facile.jpg,100_Billion_Zimbabwe,facile,100_Billion_Zimbabwe,5_milliard_dinar,100_Billion_Zimbabwe,100_Billion_Zimbabwe,628,0,0.996,493.8,1.0,100_Billion_Zimbabwe,1.133
+0038_100_Billion_Zimbabwe_facile.jpg,100_Billion_Zimbabwe,facile,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,136,0,0.9956,415.6,1.0,1_million_Lira,0.9853
+0039_100_Billion_Zimbabwe_facile.jpg,100_Billion_Zimbabwe,facile,100_Billion_Zimbabwe,500_millions_drachma,100_Billion_Zimbabwe,100_Billion_Zimbabwe,93,0,0.9961,415.9,1.0,inconnu,0.6073
+0040_100_Billion_Zimbabwe_rotation.jpg,100_Billion_Zimbabwe,rotation,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,42,0,0.9832,529.0,1.0,inconnu,0.2456
+0041_100_Billion_Zimbabwe_rotation.jpg,100_Billion_Zimbabwe,rotation,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,116,0,0.9856,529.3,1.0,100k_Zaire,0.6798
+0042_100_Billion_Zimbabwe_rotation.jpg,100_Billion_Zimbabwe,rotation,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,430,0,0.9974,442.8,1.0,500_Angola,0.5902
+0043_100_Billion_Zimbabwe_rotation.jpg,100_Billion_Zimbabwe,rotation,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,446,0,0.9948,432.8,1.0,1000_Rouble,0.5043
+0044_100_Billion_Zimbabwe_perspective.jpg,100_Billion_Zimbabwe,perspective,100_Billion_Zimbabwe,F2-12 50_Trillions_ZWR,100_Billion_Zimbabwe,100_Billion_Zimbabwe,190,0,0.9893,435.5,1.0,500_Angola,0.6704
+0045_100_Billion_Zimbabwe_perspective.jpg,100_Billion_Zimbabwe,perspective,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,323,0,0.994,467.1,1.0,inconnu,0.519
+0046_100_Billion_Zimbabwe_perspective.jpg,100_Billion_Zimbabwe,perspective,100_Billion_Zimbabwe,F2-5 1_million_B-Pengo,100_Billion_Zimbabwe,100_Billion_Zimbabwe,295,0,0.995,461.7,1.0,inconnu,0.5757
+0047_100_Billion_Zimbabwe_perspective.jpg,100_Billion_Zimbabwe,perspective,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,187,0,0.9945,443.0,1.0,inconnu,0.7357
+0048_100_Billion_Zimbabwe_echelle.jpg,100_Billion_Zimbabwe,echelle,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,23,0,0.9902,430.6,1.0,100_milliards_Drachma,0.5261
+0049_100_Billion_Zimbabwe_echelle.jpg,100_Billion_Zimbabwe,echelle,100_Billion_Zimbabwe,1_billion_Notgeld,100_Billion_Zimbabwe,100_Billion_Zimbabwe,11,0,0.91,395.1,1.0,inconnu,0.4807
+0050_100_Billion_Zimbabwe_echelle.jpg,100_Billion_Zimbabwe,echelle,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,29,0,0.9654,438.3,1.0,10k_Zlotych,0.7948
+0051_100_Billion_Zimbabwe_echelle.jpg,100_Billion_Zimbabwe,echelle,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,36,0,0.9861,977.6,2.0,100_milliards_Drachma,0.7238
+0052_100_Billion_Zimbabwe_eclairage.jpg,100_Billion_Zimbabwe,eclairage,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,495,0,0.9978,461.6,1.0,1000_Cruzados,0.5509
+0053_100_Billion_Zimbabwe_eclairage.jpg,100_Billion_Zimbabwe,eclairage,100_Billion_Zimbabwe,F2-8 50_cents_ZWN,100_Billion_Zimbabwe,100_Billion_Zimbabwe,192,5,0.9973,603.9,1.0,inconnu,0.5685
+0054_100_Billion_Zimbabwe_eclairage.jpg,100_Billion_Zimbabwe,eclairage,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,55,0,0.9943,534.2,1.0,inconnu,1.2906
+0055_100_Billion_Zimbabwe_eclairage.jpg,100_Billion_Zimbabwe,eclairage,100_Billion_Zimbabwe,1_millard_MilPengo,100_Billion_Zimbabwe,100_Billion_Zimbabwe,64,0,0.9901,351.1,1.0,1_million_bolivar,0.6466
+0056_100_Billion_Zimbabwe_flou.jpg,100_Billion_Zimbabwe,flou,100_Billion_Zimbabwe,1_millard_MilPengo,100_Billion_Zimbabwe,100_Billion_Zimbabwe,41,0,0.9552,406.0,1.0,1000_Rouble,0.7786
+0057_100_Billion_Zimbabwe_flou.jpg,100_Billion_Zimbabwe,flou,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,92,0,0.9942,568.9,1.0,10k_Liban,0.5176
+0058_100_Billion_Zimbabwe_flou.jpg,100_Billion_Zimbabwe,flou,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,68,0,0.9903,427.1,1.0,200k_nicaragua,0.6819
+0059_100_Billion_Zimbabwe_flou.jpg,100_Billion_Zimbabwe,flou,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,68,0,0.9858,540.9,1.0,1_million_bolivar,0.3102
+0060_100_Billion_Zimbabwe_occlusion.jpg,100_Billion_Zimbabwe,occlusion,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,247,4,0.9961,528.8,1.0,10k_Zlotych,0.4864
+0061_100_Billion_Zimbabwe_occlusion.jpg,100_Billion_Zimbabwe,occlusion,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,95,0,0.9906,634.7,1.0,1_million_bolivar,0.583
+0062_100_Billion_Zimbabwe_occlusion.jpg,100_Billion_Zimbabwe,occlusion,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,16,0,0.9729,397.5,1.0,200k_nicaragua,0.558
+0063_100_Billion_Zimbabwe_occlusion.jpg,100_Billion_Zimbabwe,occlusion,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,130,0,0.9905,381.9,1.0,200k_nicaragua,0.754
+0064_100_Billion_Zimbabwe_froisse.jpg,100_Billion_Zimbabwe,froisse,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,10,0,0.8057,983.7,2.0,1000_Rouble,0.6541
+0065_100_Billion_Zimbabwe_froisse.jpg,100_Billion_Zimbabwe,froisse,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,42,0,0.9899,429.2,1.0,1000_Rouble,0.4902
+0066_100_Billion_Zimbabwe_froisse.jpg,100_Billion_Zimbabwe,froisse,100_Billion_Zimbabwe,1000_Kronen,100_Billion_Zimbabwe,100_Billion_Zimbabwe,20,0,0.9832,602.9,1.0,1000_Cruzados,0.6206
+0067_100_Billion_Zimbabwe_froisse.jpg,100_Billion_Zimbabwe,froisse,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,15,0,0.8898,515.6,1.0,inconnu,0.9473
+0068_100_Billion_Zimbabwe_compression.jpg,100_Billion_Zimbabwe,compression,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,125,0,0.9844,516.4,1.0,inconnu,0.6798
+0069_100_Billion_Zimbabwe_compression.jpg,100_Billion_Zimbabwe,compression,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,158,4,0.9937,513.0,1.0,200k_nicaragua,0.591
+0070_100_Billion_Zimbabwe_compression.jpg,100_Billion_Zimbabwe,compression,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,213,0,0.9913,563.5,1.0,100_milliards_Drachma,0.6085
+0071_100_Billion_Zimbabwe_compression.jpg,100_Billion_Zimbabwe,compression,100_Billion_Zimbabwe,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,111,0,0.9972,429.1,1.0,inconnu,0.6462
+0072_1000_Rouble_facile.jpg,1000_Rouble,facile,1000_Rouble,,1000_Rouble,1000_Rouble,292,0,0.9971,513.0,1.0,1_million_bolivar,0.4635
+0073_1000_Rouble_facile.jpg,1000_Rouble,facile,1000_Rouble,,1000_Rouble,1000_Rouble,503,0,0.9963,449.8,1.0,1_million_Intis,0.3484
+0074_1000_Rouble_facile.jpg,1000_Rouble,facile,1000_Rouble,,1000_Rouble,1000_Rouble,336,0,0.9934,393.4,1.0,100_Billion_Zimbabwe,0.8088
+0075_1000_Rouble_facile.jpg,1000_Rouble,facile,1000_Rouble,,1000_Rouble,1000_Rouble,307,0,0.9951,387.1,1.0,500_Angola,0.5122
+0076_1000_Rouble_rotation.jpg,1000_Rouble,rotation,1000_Rouble,,1000_Rouble,1000_Rouble,352,0,0.9939,390.4,1.0,inconnu,0.4698
+0077_1000_Rouble_rotation.jpg,1000_Rouble,rotation,1000_Rouble,,1000_Rouble,1000_Rouble,327,0,0.9913,418.4,1.0,1000_Rouble,0.2131
+0078_1000_Rouble_rotation.jpg,1000_Rouble,rotation,1000_Rouble,,1000_Rouble,1000_Rouble,243,0,0.9939,348.9,1.0,1_million_bolivar,0.3397
+0079_1000_Rouble_rotation.jpg,1000_Rouble,rotation,1000_Rouble,1_billion_Notgeld,1000_Rouble,1000_Rouble,366,6,0.995,390.1,1.0,10k_Liban,0.4631
+0080_1000_Rouble_perspective.jpg,1000_Rouble,perspective,1000_Rouble,F2-4 500_millions_mark,1000_Rouble,1000_Rouble,122,0,0.997,359.4,1.0,100k_Zaire,0.4414
+0081_1000_Rouble_perspective.jpg,1000_Rouble,perspective,1000_Rouble,,1000_Rouble,1000_Rouble,293,0,0.9895,357.1,1.0,inconnu,0.7121
+0082_1000_Rouble_perspective.jpg,1000_Rouble,perspective,1000_Rouble,,1000_Rouble,1000_Rouble,220,0,0.9911,377.0,1.0,1_million_bolivar,0.2024
+0083_1000_Rouble_perspective.jpg,1000_Rouble,perspective,1000_Rouble,,1000_Rouble,1000_Rouble,377,0,0.9859,482.6,1.0,500_Angola,0.4437
+0084_1000_Rouble_echelle.jpg,1000_Rouble,echelle,1000_Rouble,,1000_Rouble,1000_Rouble,24,0,0.9653,478.0,1.0,100_milliards_Drachma,0.9488
+0085_1000_Rouble_echelle.jpg,1000_Rouble,echelle,1000_Rouble,,1000_Rouble,1000_Rouble,18,0,0.98,448.8,1.0,inconnu,0.5434
+0086_1000_Rouble_echelle.jpg,1000_Rouble,echelle,1000_Rouble,F2-4 500_millions_mark,inconnu,inconnu,0,0,,988.7,1.0,10k_Zlotych,0.4833
+0087_1000_Rouble_echelle.jpg,1000_Rouble,echelle,1000_Rouble,,1000_Rouble,1000_Rouble,61,0,0.99,937.5,2.0,1_million_Intis,0.5798
+0088_1000_Rouble_eclairage.jpg,1000_Rouble,eclairage,1000_Rouble,,1000_Rouble,1000_Rouble,207,0,0.99,381.4,1.0,inconnu,1.179
+0089_1000_Rouble_eclairage.jpg,1000_Rouble,eclairage,1000_Rouble,,1000_Rouble,1000_Rouble,522,0,0.9961,447.0,1.0,inconnu,0.7657
+0090_1000_Rouble_eclairage.jpg,1000_Rouble,eclairage,1000_Rouble,,1000_Rouble,1000_Rouble,376,0,0.9968,345.6,1.0,inconnu,0.8672
+0091_1000_Rouble_eclairage.jpg,1000_Rouble,eclairage,1000_Rouble,,1000_Rouble,1000_Rouble,501,0,0.9896,425.8,1.0,inconnu,0.6987
+0092_1000_Rouble_flou.jpg,1000_Rouble,flou,1000_Rouble,,1000_Rouble,1000_Rouble,19,0,0.974,551.7,1.0,inconnu,0.6947
+0093_1000_Rouble_flou.jpg,1000_Rouble,flou,1000_Rouble,,1000_Rouble,1000_Rouble,211,0,0.9942,459.0,1.0,inconnu,0.4293
+0094_1000_Rouble_flou.jpg,1000_Rouble,flou,1000_Rouble,,1000_Rouble,1000_Rouble,15,4,0.9853,366.8,1.0,inconnu,0.6262
+0095_1000_Rouble_flou.jpg,1000_Rouble,flou,1000_Rouble,1_millard_MilPengo,inconnu,1_million_Lira,5,0,,966.6,2.0,100_Billion_Zimbabwe,0.4193
+0096_1000_Rouble_occlusion.jpg,1000_Rouble,occlusion,1000_Rouble,F2-10 1_ZWR,1000_Rouble,1000_Rouble,157,0,0.9946,412.6,1.0,10k_Zlotych,1.1414
+0097_1000_Rouble_occlusion.jpg,1000_Rouble,occlusion,1000_Rouble,,1000_Rouble,1000_Rouble,126,0,0.9965,386.5,1.0,inconnu,0.3583
+0098_1000_Rouble_occlusion.jpg,1000_Rouble,occlusion,1000_Rouble,,1000_Rouble,1000_Rouble,255,0,0.983,401.6,1.0,200k_nicaragua,0.5739
+0099_1000_Rouble_occlusion.jpg,1000_Rouble,occlusion,1000_Rouble,,1000_Rouble,1000_Rouble,287,0,0.9969,548.5,1.0,inconnu,0.9179
+0100_1000_Rouble_froisse.jpg,1000_Rouble,froisse,1000_Rouble,,1000_Rouble,1000_Rouble,40,0,0.9546,368.7,1.0,1_million_Intis,0.6736
+0101_1000_Rouble_froisse.jpg,1000_Rouble,froisse,1000_Rouble,,1000_Rouble,1000_Rouble,20,0,0.9702,447.0,1.0,1000_Rouble,0.5577
+0102_1000_Rouble_froisse.jpg,1000_Rouble,froisse,1000_Rouble,,1000_Rouble,1000_Rouble,22,0,0.9677,431.2,1.0,10k_Zlotych,0.3771
+0103_1000_Rouble_froisse.jpg,1000_Rouble,froisse,1000_Rouble,2000_millions_drachma,1000_Rouble,1000_Rouble,204,0,0.9774,502.8,1.0,inconnu,0.6089
+0104_1000_Rouble_compression.jpg,1000_Rouble,compression,1000_Rouble,,1000_Rouble,1000_Rouble,148,0,0.9952,435.4,1.0,inconnu,0.3499
+0105_1000_Rouble_compression.jpg,1000_Rouble,compression,1000_Rouble,100_Trillion_Zimbabwe,1000_Rouble,1000_Rouble,315,0,0.9918,413.7,1.0,100_Billion_Zimbabwe,0.5074
+0106_1000_Rouble_compression.jpg,1000_Rouble,compression,1000_Rouble,,1000_Rouble,1000_Rouble,226,0,0.9972,428.7,1.0,inconnu,0.6758
+0107_1000_Rouble_compression.jpg,1000_Rouble,compression,1000_Rouble,,1000_Rouble,1000_Rouble,179,5,0.9875,659.9,1.0,100_Billion_Zimbabwe,0.6038
+0108_500_Angola_facile.jpg,500_Angola,facile,500_Angola,,500_Angola,500_Angola,265,0,0.9947,557.3,1.0,10k_Liban,0.4862
+0109_500_Angola_facile.jpg,500_Angola,facile,500_Angola,100_Trillion_Zimbabwe,500_Angola,500_Angola,81,0,0.9963,496.0,1.0,10k_Zlotych,0.5302
+0110_500_Angola_facile.jpg,500_Angola,facile,500_Angola,,500_Angola,500_Angola,417,5,0.9935,479.3,1.0,1_million_Lira,0.6575
+0111_500_Angola_facile.jpg,500_Angola,facile,500_Angola,,500_Angola,500_Angola,238,0,0.9978,509.5,1.0,100_Billion_Zimbabwe,0.7218
+0112_500_Angola_rotation.jpg,500_Angola,rotation,500_Angola,,500_Angola,500_Angola,271,0,0.9942,319.0,1.0,inconnu,0.3648
+0113_500_Angola_rotation.jpg,500_Angola,rotation,500_Angola,F2-9 5_Billions_ZWN,500_Angola,500_Angola,64,15,0.9936,535.4,1.0,inconnu,0.478
+0114_500_Angola_rotation.jpg,500_Angola,rotation,500_Angola,,500_Angola,500_Angola,160,4,0.988,485.9,1.0,inconnu,0.3078
+0115_500_Angola_rotation.jpg,500_Angola,rotation,500_Angola,,500_Angola,500_Angola,470,0,0.9977,618.8,1.0,500_Angola,1.1785
+0116_500_Angola_perspective.jpg,500_Angola,perspective,500_Angola,10k_Mark,500_Angola,500_Angola,13,0,0.9014,435.2,1.0,inconnu,0.4594
+0117_500_Angola_perspective.jpg,500_Angola,perspective,500_Angola,,500_Angola,500_Angola,87,0,0.9867,508.2,1.0,inconnu,0.4012
+0118_500_Angola_perspective.jpg,500_Angola,perspective,500_Angola,,500_Angola,500_Angola,118,0,0.992,532.3,1.0,500_Angola,0.7953
+0119_500_Angola_perspective.jpg,500_Angola,perspective,500_Angola,,500_Angola,500_Angola,333,0,0.996,494.9,1.0,1000_Cruzados,0.7364
+0120_500_Angola_echelle.jpg,500_Angola,echelle,500_Angola,,500_Angola,500_Angola,13,0,0.9587,477.1,1.0,10k_Liban,0.2964
+0121_500_Angola_echelle.jpg,500_Angola,echelle,500_Angola,,500_Angola,500_Angola,13,0,0.9195,984.8,2.0,inconnu,0.2629
+0122_500_Angola_echelle.jpg,500_Angola,echelle,500_Angola,,500_Angola,500_Angola,8,0,0.7798,452.4,1.0,10k_Liban,0.3428
+0123_500_Angola_echelle.jpg,500_Angola,echelle,500_Angola,,500_Angola,500_Angola,41,0,0.9811,485.9,1.0,1000_Rouble,0.6515
+0124_500_Angola_eclairage.jpg,500_Angola,eclairage,500_Angola,,500_Angola,500_Angola,485,0,0.9934,402.4,1.0,10k_Zlotych,0.6378
+0125_500_Angola_eclairage.jpg,500_Angola,eclairage,500_Angola,,500_Angola,500_Angola,261,0,0.9852,338.2,1.0,200k_nicaragua,0.5623
+0126_500_Angola_eclairage.jpg,500_Angola,eclairage,500_Angola,,500_Angola,500_Angola,120,0,0.9777,395.7,1.0,inconnu,0.638
+0127_500_Angola_eclairage.jpg,500_Angola,eclairage,500_Angola,,500_Angola,500_Angola,621,0,0.9972,566.5,1.0,inconnu,0.5869
+0128_500_Angola_flou.jpg,500_Angola,flou,500_Angola,,500_Angola,500_Angola,39,0,0.9814,465.0,1.0,100k_Zaire,0.6979
+0129_500_Angola_flou.jpg,500_Angola,flou,500_Angola,,500_Angola,500_Angola,25,0,0.9388,359.5,1.0,10k_Zlotych,0.4031
+0130_500_Angola_flou.jpg,500_Angola,flou,500_Angola,,500_Angola,500_Angola,60,0,0.9881,356.7,1.0,inconnu,0.2883
+0131_500_Angola_flou.jpg,500_Angola,flou,500_Angola,F2-7 20k_cheque_ZWD,500_Angola,500_Angola,81,4,0.9713,398.8,1.0,10k_Zlotych,0.4082
+0132_500_Angola_occlusion.jpg,500_Angola,occlusion,500_Angola,,500_Angola,500_Angola,40,0,0.9872,373.1,1.0,10k_Zlotych,0.3918
+0133_500_Angola_occlusion.jpg,500_Angola,occlusion,500_Angola,F2-4 500_millions_mark,500_Angola,500_Angola,42,6,0.9351,563.0,1.0,1_million_bolivar,0.5048
+0134_500_Angola_occlusion.jpg,500_Angola,occlusion,500_Angola,,500_Angola,500_Angola,40,0,0.9896,460.5,1.0,500_Angola,0.4724
+0135_500_Angola_occlusion.jpg,500_Angola,occlusion,500_Angola,,500_Angola,500_Angola,41,0,0.9794,425.8,1.0,10k_Zlotych,0.3664
+0136_500_Angola_froisse.jpg,500_Angola,froisse,500_Angola,,500_Angola,500_Angola,12,0,0.9648,425.4,1.0,inconnu,0.4928
+0137_500_Angola_froisse.jpg,500_Angola,froisse,500_Angola,,500_Angola,500_Angola,23,0,0.885,412.7,1.0,10k_Liban,0.614
+0138_500_Angola_froisse.jpg,500_Angola,froisse,500_Angola,,500_Angola,500_Angola,7,0,0.9838,385.8,1.0,10k_Liban,0.8693
+0139_500_Angola_froisse.jpg,500_Angola,froisse,500_Angola,,500_Angola,500_Angola,16,0,0.937,337.1,1.0,200k_nicaragua,0.4204
+0140_500_Angola_compression.jpg,500_Angola,compression,500_Angola,,500_Angola,500_Angola,78,0,0.9846,351.0,1.0,inconnu,0.6291
+0141_500_Angola_compression.jpg,500_Angola,compression,500_Angola,,500_Angola,500_Angola,23,0,0.8797,391.7,1.0,inconnu,0.6956
+0142_500_Angola_compression.jpg,500_Angola,compression,500_Angola,,500_Angola,500_Angola,37,0,0.9383,465.2,1.0,500_Angola,0.5855
+0143_500_Angola_compression.jpg,500_Angola,compression,500_Angola,1000_Kronen,500_Angola,500_Angola,239,0,0.9949,514.4,1.0,inconnu,0.5624
+0144_10k_Liban_facile.jpg,10k_Liban,facile,10k_Liban,10k_Mark,10k_Liban,10k_Liban,310,0,0.995,558.1,1.0,10k_Liban,0.1992
+0145_10k_Liban_facile.jpg,10k_Liban,facile,10k_Liban,,10k_Liban,10k_Liban,276,0,0.9972,469.4,1.0,inconnu,0.6569
+0146_10k_Liban_facile.jpg,10k_Liban,facile,10k_Liban,,10k_Liban,10k_Liban,102,0,0.9981,486.7,1.0,1_million_bolivar,0.6642
+0147_10k_Liban_facile.jpg,10k_Liban,facile,10k_Liban,,10k_Liban,10k_Liban,363,0,0.9963,449.3,1.0,1000_Cruzados,0.592
+0148_10k_Liban_rotation.jpg,10k_Liban,rotation,10k_Liban,,10k_Liban,10k_Liban,130,4,0.9956,469.7,1.0,1000_Rouble,0.4613
+0149_10k_Liban_rotation.jpg,10k_Liban,rotation,10k_Liban,,10k_Liban,10k_Liban,336,0,0.9951,401.9,1.0,inconnu,0.6604
+0150_10k_Liban_rotation.jpg,10k_Liban,rotation,10k_Liban,,10k_Liban,10k_Liban,305,6,0.9948,399.4,1.0,inconnu,0.5574
+0151_10k_Liban_rotation.jpg,10k_Liban,rotation,10k_Liban,F2-9 5_Billions_ZWN,10k_Liban,10k_Liban,272,6,0.9961,452.4,1.0,10k_Liban,0.2946
+0152_10k_Liban_perspective.jpg,10k_Liban,perspective,10k_Liban,,10k_Liban,10k_Liban,150,0,0.9951,430.5,1.0,200k_nicaragua,1.011
+0153_10k_Liban_perspective.jpg,10k_Liban,perspective,10k_Liban,500_millions_drachma,10k_Liban,10k_Liban,101,0,0.9851,490.7,1.0,1_million_bolivar,0.4821
+0154_10k_Liban_perspective.jpg,10k_Liban,perspective,10k_Liban,,10k_Liban,10k_Liban,92,0,0.9914,392.9,1.0,10k_Liban,0.4182
+0155_10k_Liban_perspective.jpg,10k_Liban,perspective,10k_Liban,TizMillio_B_Pengo,10k_Liban,10k_Liban,186,0,0.9944,571.0,1.0,inconnu,0.5707
+0156_10k_Liban_echelle.jpg,10k_Liban,echelle,10k_Liban,,10k_Liban,10k_Liban,17,0,0.987,1055.5,2.0,inconnu,0.2473
+0157_10k_Liban_echelle.jpg,10k_Liban,echelle,10k_Liban,,10k_Liban,10k_Liban,20,0,0.9789,399.1,1.0,inconnu,0.7109
+0158_10k_Liban_echelle.jpg,10k_Liban,echelle,10k_Liban,,10k_Liban,10k_Liban,9,0,0.8896,489.8,1.0,inconnu,0.5999
+0159_10k_Liban_echelle.jpg,10k_Liban,echelle,10k_Liban,,10k_Liban,10k_Liban,48,4,0.9858,992.1,2.0,inconnu,0.6352
+0160_10k_Liban_eclairage.jpg,10k_Liban,eclairage,10k_Liban,,10k_Liban,10k_Liban,79,0,0.9944,513.2,1.0,1_million_bolivar,0.4168
+0161_10k_Liban_eclairage.jpg,10k_Liban,eclairage,10k_Liban,,10k_Liban,10k_Liban,111,0,0.9955,499.5,1.0,200k_nicaragua,0.7809
+0162_10k_Liban_eclairage.jpg,10k_Liban,eclairage,10k_Liban,,10k_Liban,10k_Liban,257,0,0.9944,444.2,1.0,10k_Zlotych,0.5384
+0163_10k_Liban_eclairage.jpg,10k_Liban,eclairage,10k_Liban,,10k_Liban,10k_Liban,217,4,0.9958,513.8,1.0,inconnu,0.5754
+0164_10k_Liban_flou.jpg,10k_Liban,flou,10k_Liban,,10k_Liban,10k_Liban,8,4,0.9329,884.4,2.0,inconnu,0.5873
+0165_10k_Liban_flou.jpg,10k_Liban,flou,10k_Liban,500_millions_zimbabwe,10k_Liban,10k_Liban,10,0,0.9374,479.0,1.0,500_Angola,0.4804
+0166_10k_Liban_flou.jpg,10k_Liban,flou,10k_Liban,,10k_Liban,10k_Liban,84,0,0.991,448.1,1.0,inconnu,0.5556
+0167_10k_Liban_flou.jpg,10k_Liban,flou,10k_Liban,,10k_Liban,10k_Liban,153,0,0.9897,481.3,1.0,inconnu,0.3478
+0168_10k_Liban_occlusion.jpg,10k_Liban,occlusion,10k_Liban,F2-5 1_million_B-Pengo,10k_Liban,10k_Liban,41,5,0.988,533.9,1.0,inconnu,0.8978
+0169_10k_Liban_occlusion.jpg,10k_Liban,occlusion,10k_Liban,,10k_Liban,10k_Liban,144,0,0.9964,530.8,1.0,10k_Liban,0.5806
+0170_10k_Liban_occlusion.jpg,10k_Liban,occlusion,10k_Liban,,10k_Liban,10k_Liban,142,4,0.9947,503.9,1.0,inconnu,0.5486
+0171_10k_Liban_occlusion.jpg,10k_Liban,occlusion,10k_Liban,2000_millions_drachma,10k_Liban,10k_Liban,102,0,0.9936,392.6,1.0,inconnu,0.7646
+0172_10k_Liban_froisse.jpg,10k_Liban,froisse,10k_Liban,,10k_Liban,10k_Liban,38,0,0.9922,464.1,1.0,1_million_bolivar,0.565
+0173_10k_Liban_froisse.jpg,10k_Liban,froisse,10k_Liban,100_billion_mark,10k_Liban,10k_Liban,7,0,0.9462,1234.4,2.0,10k_Liban,0.4547
+0174_10k_Liban_froisse.jpg,10k_Liban,froisse,10k_Liban,,10k_Liban,10k_Liban,12,0,0.976,955.2,2.0,200k_nicaragua,0.5308
+0175_10k_Liban_froisse.jpg,10k_Liban,froisse,10k_Liban,,10k_Liban,10k_Liban,12,0,0.9788,465.6,1.0,10k_Liban,0.7203
+0176_10k_Liban_compression.jpg,10k_Liban,compression,10k_Liban,,10k_Liban,10k_Liban,68,0,0.979,449.3,1.0,1000_Rouble,0.4642
+0177_10k_Liban_compression.jpg,10k_Liban,compression,10k_Liban,,10k_Liban,10k_Liban,48,0,0.9925,458.0,1.0,inconnu,0.6194
+0178_10k_Liban_compression.jpg,10k_Liban,compression,10k_Liban,,10k_Liban,10k_Liban,28,0,0.9624,499.1,1.0,inconnu,0.563
+0179_10k_Liban_compression.jpg,10k_Liban,compression,10k_Liban,,10k_Liban,10k_Liban,171,0,0.9847,372.2,1.0,10k_Zlotych,0.575
+0180_1_million_bolivar_facile.jpg,1_million_bolivar,facile,1_million_bolivar,,1_million_bolivar,1_million_bolivar,441,0,0.9975,375.0,1.0,10k_Zlotych,0.392
+0181_1_million_bolivar_facile.jpg,1_million_bolivar,facile,1_million_bolivar,F2-10 1_ZWR,1_million_bolivar,1_million_bolivar,640,0,0.9971,411.0,1.0,1_million_bolivar,0.5438
+0182_1_million_bolivar_facile.jpg,1_million_bolivar,facile,1_million_bolivar,,1_million_bolivar,1_million_bolivar,731,0,0.9985,426.5,1.0,1000_Cruzados,0.61
+0183_1_million_bolivar_facile.jpg,1_million_bolivar,facile,1_million_bolivar,F2-10 1_ZWR,1_million_bolivar,1_million_bolivar,144,0,0.9942,511.7,1.0,1_million_bolivar,0.3521
+0184_1_million_bolivar_rotation.jpg,1_million_bolivar,rotation,1_million_bolivar,500_millions_drachma,1_million_bolivar,1_million_bolivar,457,0,0.9923,426.9,1.0,100k_Zaire,0.5099
+0185_1_million_bolivar_rotation.jpg,1_million_bolivar,rotation,1_million_bolivar,500_millions_zimbabwe,1_million_bolivar,1_million_bolivar,307,4,0.9963,462.6,1.0,1_million_Lira,0.5185
+0186_1_million_bolivar_rotation.jpg,1_million_bolivar,rotation,1_million_bolivar,,1_million_bolivar,1_million_bolivar,243,0,0.9942,465.1,1.0,100_Billion_Zimbabwe,0.3954
+0187_1_million_bolivar_rotation.jpg,1_million_bolivar,rotation,1_million_bolivar,,1_million_bolivar,1_million_bolivar,152,0,0.9916,496.3,1.0,inconnu,0.3897
+0188_1_million_bolivar_perspective.jpg,1_million_bolivar,perspective,1_million_bolivar,F2-9 5_Billions_ZWN,100_Billion_Zimbabwe,100_Billion_Zimbabwe,38,18,,456.5,1.0,10k_Liban,0.9088
+0189_1_million_bolivar_perspective.jpg,1_million_bolivar,perspective,1_million_bolivar,1_millard_MilPengo,1_million_bolivar,1_million_bolivar,78,0,0.9883,446.6,1.0,inconnu,0.3355
+0190_1_million_bolivar_perspective.jpg,1_million_bolivar,perspective,1_million_bolivar,,inconnu,200k_nicaragua,6,0,,1058.8,1.0,1000_Cruzados,0.7012
+0191_1_million_bolivar_perspective.jpg,1_million_bolivar,perspective,1_million_bolivar,,1_million_bolivar,1_million_bolivar,146,4,0.9935,509.7,1.0,10k_Zlotych,0.4534
+0192_1_million_bolivar_echelle.jpg,1_million_bolivar,echelle,1_million_bolivar,5_milliard_dinar,1_million_bolivar,1_million_bolivar,69,0,0.9829,376.4,1.0,inconnu,0.583
+0193_1_million_bolivar_echelle.jpg,1_million_bolivar,echelle,1_million_bolivar,,1_million_bolivar,1_million_bolivar,36,0,0.9881,1116.8,2.0,inconnu,0.5254
+0194_1_million_bolivar_echelle.jpg,1_million_bolivar,echelle,1_million_bolivar,,1_million_bolivar,1_million_bolivar,59,0,0.9842,547.6,1.0,10k_Zlotych,0.6918
+0195_1_million_bolivar_echelle.jpg,1_million_bolivar,echelle,1_million_bolivar,,1_million_bolivar,1_million_bolivar,21,0,0.9525,711.5,1.0,500_Angola,0.5392
+0196_1_million_bolivar_eclairage.jpg,1_million_bolivar,eclairage,1_million_bolivar,,1_million_bolivar,1_million_bolivar,154,0,0.9956,380.5,1.0,inconnu,1.2717
+0197_1_million_bolivar_eclairage.jpg,1_million_bolivar,eclairage,1_million_bolivar,,1_million_bolivar,1_million_bolivar,290,0,0.9886,370.6,1.0,200k_nicaragua,0.583
+0198_1_million_bolivar_eclairage.jpg,1_million_bolivar,eclairage,1_million_bolivar,_million_mark,1_million_bolivar,1_million_bolivar,80,0,0.9963,397.9,1.0,500_Angola,1.1685
+0199_1_million_bolivar_eclairage.jpg,1_million_bolivar,eclairage,1_million_bolivar,,1_million_bolivar,1_million_bolivar,450,0,0.9987,409.4,1.0,200k_nicaragua,0.9376
+0200_1_million_bolivar_flou.jpg,1_million_bolivar,flou,1_million_bolivar,,1_million_bolivar,1_million_bolivar,39,0,0.9817,548.4,1.0,1_million_bolivar,0.4539
+0201_1_million_bolivar_flou.jpg,1_million_bolivar,flou,1_million_bolivar,,1_million_bolivar,1_million_bolivar,78,4,0.9745,406.2,1.0,inconnu,0.6555
+0202_1_million_bolivar_flou.jpg,1_million_bolivar,flou,1_million_bolivar,,1_million_bolivar,1_million_bolivar,26,0,0.972,460.1,1.0,inconnu,0.482
+0203_1_million_bolivar_flou.jpg,1_million_bolivar,flou,1_million_bolivar,5_milliard_dinar,1_million_bolivar,1_million_bolivar,59,0,0.9903,329.0,1.0,200k_nicaragua,0.5381
+0204_1_million_bolivar_occlusion.jpg,1_million_bolivar,occlusion,1_million_bolivar,,1_million_bolivar,1_million_bolivar,150,0,0.9956,401.1,1.0,1_million_bolivar,0.513
+0205_1_million_bolivar_occlusion.jpg,1_million_bolivar,occlusion,1_million_bolivar,,1_million_bolivar,1_million_bolivar,78,0,0.9945,371.3,1.0,10k_Liban,0.6768
+0206_1_million_bolivar_occlusion.jpg,1_million_bolivar,occlusion,1_million_bolivar,,1_million_bolivar,1_million_bolivar,144,0,0.9962,399.7,1.0,1000_Rouble,0.9426
+0207_1_million_bolivar_occlusion.jpg,1_million_bolivar,occlusion,1_million_bolivar,,1_million_bolivar,1_million_bolivar,280,0,0.9905,558.7,1.0,1000_Cruzados,0.6016
+0208_1_million_bolivar_froisse.jpg,1_million_bolivar,froisse,1_million_bolivar,500_millions_drachma,1_million_bolivar,1_million_bolivar,27,0,0.9804,697.4,1.0,inconnu,0.3744
+0209_1_million_bolivar_froisse.jpg,1_million_bolivar,froisse,1_million_bolivar,,1_million_bolivar,1_million_bolivar,20,0,0.9717,400.6,1.0,inconnu,1.2236
+0210_1_million_bolivar_froisse.jpg,1_million_bolivar,froisse,1_million_bolivar,,1_million_bolivar,1_million_bolivar,23,0,0.967,448.6,1.0,1_million_bolivar,0.4952
+0211_1_million_bolivar_froisse.jpg,1_million_bolivar,froisse,1_million_bolivar,1_billion_Notgeld,1_million_bolivar,1_million_bolivar,10,0,0.9387,659.5,1.0,inconnu,0.5263
+0212_1_million_bolivar_compression.jpg,1_million_bolivar,compression,1_million_bolivar,,1_million_bolivar,1_million_bolivar,120,0,0.995,401.8,1.0,1000_Rouble,0.448
+0213_1_million_bolivar_compression.jpg,1_million_bolivar,compression,1_million_bolivar,100_Trillion_Zimbabwe,1_million_bolivar,1_million_bolivar,17,0,0.9705,419.9,1.0,1_million_bolivar,0.4045
+0214_1_million_bolivar_compression.jpg,1_million_bolivar,compression,1_million_bolivar,,1_million_bolivar,1_million_bolivar,113,0,0.9913,374.3,1.0,1000_Rouble,0.8127
+0215_1_million_bolivar_compression.jpg,1_million_bolivar,compression,1_million_bolivar,F2-12 50_Trillions_ZWR,1_million_bolivar,1_million_bolivar,89,0,0.9937,453.8,1.0,500_Angola,0.5824
+0216_200k_nicaragua_facile.jpg,200k_nicaragua,facile,200k_nicaragua,,200k_nicaragua,200k_nicaragua,237,7,0.9978,496.3,1.0,1000_Cruzados,0.5505
+0217_200k_nicaragua_facile.jpg,200k_nicaragua,facile,200k_nicaragua,,200k_nicaragua,200k_nicaragua,441,4,0.9964,610.0,1.0,500_Angola,0.2116
+0218_200k_nicaragua_facile.jpg,200k_nicaragua,facile,200k_nicaragua,,200k_nicaragua,200k_nicaragua,521,0,0.9953,515.3,1.0,200k_nicaragua,0.6007
+0219_200k_nicaragua_facile.jpg,200k_nicaragua,facile,200k_nicaragua,,200k_nicaragua,200k_nicaragua,567,0,0.9959,384.2,1.0,inconnu,0.5508
+0220_200k_nicaragua_rotation.jpg,200k_nicaragua,rotation,200k_nicaragua,,200k_nicaragua,200k_nicaragua,318,0,0.9937,419.7,1.0,100k_Zaire,0.5444
+0221_200k_nicaragua_rotation.jpg,200k_nicaragua,rotation,200k_nicaragua,500_millions_drachma,200k_nicaragua,200k_nicaragua,200,4,0.9896,509.2,1.0,1_million_Lira,0.8914
+0222_200k_nicaragua_rotation.jpg,200k_nicaragua,rotation,200k_nicaragua,,200k_nicaragua,200k_nicaragua,189,0,0.992,572.0,1.0,inconnu,0.7189
+0223_200k_nicaragua_rotation.jpg,200k_nicaragua,rotation,200k_nicaragua,,200k_nicaragua,200k_nicaragua,341,0,0.9903,554.3,1.0,inconnu,0.6833
+0224_200k_nicaragua_perspective.jpg,200k_nicaragua,perspective,200k_nicaragua,500_millions_drachma,200k_nicaragua,200k_nicaragua,261,0,0.9906,402.1,1.0,1000_Cruzados,0.6464
+0225_200k_nicaragua_perspective.jpg,200k_nicaragua,perspective,200k_nicaragua,,200k_nicaragua,200k_nicaragua,236,0,0.9869,383.4,1.0,10k_Liban,0.3219
+0226_200k_nicaragua_perspective.jpg,200k_nicaragua,perspective,200k_nicaragua,F2-12 50_Trillions_ZWR,200k_nicaragua,200k_nicaragua,93,0,0.9907,425.7,1.0,100k_Zaire,0.3845
+0227_200k_nicaragua_perspective.jpg,200k_nicaragua,perspective,200k_nicaragua,100_billion_mark,200k_nicaragua,200k_nicaragua,248,0,0.9811,428.5,1.0,100_Billion_Zimbabwe,0.5272
+0228_200k_nicaragua_echelle.jpg,200k_nicaragua,echelle,200k_nicaragua,,200k_nicaragua,200k_nicaragua,8,0,0.8738,351.3,1.0,100_Billion_Zimbabwe,0.6248
+0229_200k_nicaragua_echelle.jpg,200k_nicaragua,echelle,200k_nicaragua,,200k_nicaragua,200k_nicaragua,8,0,0.2875,450.4,1.0,100_milliards_Drachma,0.4669
+0230_200k_nicaragua_echelle.jpg,200k_nicaragua,echelle,200k_nicaragua,,200k_nicaragua,200k_nicaragua,24,0,0.9543,576.6,1.0,10k_Liban,0.5839
+0231_200k_nicaragua_echelle.jpg,200k_nicaragua,echelle,200k_nicaragua,5_milliard_dinar,200k_nicaragua,200k_nicaragua,36,0,0.986,1086.1,2.0,10k_Liban,0.3934
+0232_200k_nicaragua_eclairage.jpg,200k_nicaragua,eclairage,200k_nicaragua,,200k_nicaragua,200k_nicaragua,176,0,0.9943,534.3,1.0,1000_Rouble,0.5279
+0233_200k_nicaragua_eclairage.jpg,200k_nicaragua,eclairage,200k_nicaragua,TizMillio_B_Pengo,200k_nicaragua,200k_nicaragua,60,0,0.9877,403.6,1.0,inconnu,1.3339
+0234_200k_nicaragua_eclairage.jpg,200k_nicaragua,eclairage,200k_nicaragua,1_millard_MilPengo,200k_nicaragua,200k_nicaragua,427,0,0.9971,452.6,1.0,inconnu,1.2293
+0235_200k_nicaragua_eclairage.jpg,200k_nicaragua,eclairage,200k_nicaragua,,200k_nicaragua,200k_nicaragua,435,0,0.9928,457.8,1.0,inconnu,1.214
+0236_200k_nicaragua_flou.jpg,200k_nicaragua,flou,200k_nicaragua,,200k_nicaragua,200k_nicaragua,77,0,0.9942,550.0,1.0,inconnu,0.6479
+0237_200k_nicaragua_flou.jpg,200k_nicaragua,flou,200k_nicaragua,,200k_nicaragua,200k_nicaragua,8,0,0.3416,425.1,1.0,inconnu,1.2321
+0238_200k_nicaragua_flou.jpg,200k_nicaragua,flou,200k_nicaragua,,200k_nicaragua,200k_nicaragua,35,0,0.9727,541.3,1.0,200k_nicaragua,0.5417
+0239_200k_nicaragua_flou.jpg,200k_nicaragua,flou,200k_nicaragua,,200k_nicaragua,200k_nicaragua,35,0,0.9757,536.6,1.0,inconnu,0.5871
+0240_200k_nicaragua_occlusion.jpg,200k_nicaragua,occlusion,200k_nicaragua,,200k_nicaragua,200k_nicaragua,95,0,0.9964,367.9,1.0,10k_Zlotych,0.5343
+0241_200k_nicaragua_occlusion.jpg,200k_nicaragua,occlusion,200k_nicaragua,,200k_nicaragua,200k_nicaragua,95,0,0.9912,529.5,1.0,10k_Liban,0.5411
+0242_200k_nicaragua_occlusion.jpg,200k_nicaragua,occlusion,200k_nicaragua,,200k_nicaragua,200k_nicaragua,293,0,0.9962,534.2,1.0,500_Angola,0.535
+0243_200k_nicaragua_occlusion.jpg,200k_nicaragua,occlusion,200k_nicaragua,500_millions_zimbabwe,200k_nicaragua,200k_nicaragua,34,0,0.9802,659.3,1.0,1_million_Intis,0.6483
+0244_200k_nicaragua_froisse.jpg,200k_nicaragua,froisse,200k_nicaragua,,200k_nicaragua,200k_nicaragua,67,0,0.9387,466.8,1.0,inconnu,0.5068
+0245_200k_nicaragua_froisse.jpg,200k_nicaragua,froisse,200k_nicaragua,,200k_nicaragua,200k_nicaragua,60,0,0.9376,350.1,1.0,200k_nicaragua,0.4728
+0246_200k_nicaragua_froisse.jpg,200k_nicaragua,froisse,200k_nicaragua,,200k_nicaragua,200k_nicaragua,72,0,0.9541,415.7,1.0,10k_Zlotych,0.4396
+0247_200k_nicaragua_froisse.jpg,200k_nicaragua,froisse,200k_nicaragua,,200k_nicaragua,200k_nicaragua,18,4,0.8958,349.7,1.0,100_milliards_Drachma,0.693
+0248_200k_nicaragua_compression.jpg,200k_nicaragua,compression,200k_nicaragua,,200k_nicaragua,200k_nicaragua,76,0,0.9637,506.2,1.0,inconnu,0.4307
+0249_200k_nicaragua_compression.jpg,200k_nicaragua,compression,200k_nicaragua,,200k_nicaragua,200k_nicaragua,187,0,0.9907,675.0,1.0,100_Billion_Zimbabwe,0.5218
+0250_200k_nicaragua_compression.jpg,200k_nicaragua,compression,200k_nicaragua,,200k_nicaragua,200k_nicaragua,102,0,0.9673,416.3,1.0,200k_nicaragua,0.7569
+0251_200k_nicaragua_compression.jpg,200k_nicaragua,compression,200k_nicaragua,,200k_nicaragua,200k_nicaragua,54,4,0.944,688.0,1.0,1_million_bolivar,0.408
+0252_10k_Zlotych_facile.jpg,10k_Zlotych,facile,10k_Zlotych,,10k_Zlotych,10k_Zlotych,296,0,0.9956,497.7,1.0,10k_Zlotych,0.6914
+0253_10k_Zlotych_facile.jpg,10k_Zlotych,facile,10k_Zlotych,,10k_Zlotych,10k_Zlotych,432,4,0.9931,475.4,1.0,10k_Zlotych,0.5959
+0254_10k_Zlotych_facile.jpg,10k_Zlotych,facile,10k_Zlotych,,10k_Zlotych,10k_Zlotych,257,0,0.9979,418.4,1.0,100_Billion_Zimbabwe,0.4478
+0255_10k_Zlotych_facile.jpg,10k_Zlotych,facile,10k_Zlotych,TizMillio_B_Pengo,10k_Zlotych,10k_Zlotych,174,0,0.9913,511.8,1.0,inconnu,0.5416
+0256_10k_Zlotych_rotation.jpg,10k_Zlotych,rotation,10k_Zlotych,,10k_Zlotych,10k_Zlotych,179,0,0.9953,538.8,1.0,1000_Rouble,0.5934
+0257_10k_Zlotych_rotation.jpg,10k_Zlotych,rotation,10k_Zlotych,F2-10 1_ZWR,10k_Zlotych,10k_Zlotych,147,0,0.9877,570.5,1.0,1000_Cruzados,0.5548
+0258_10k_Zlotych_rotation.jpg,10k_Zlotych,rotation,10k_Zlotych,,10k_Zlotych,10k_Zlotych,264,0,0.9974,423.3,1.0,inconnu,0.5389
+0259_10k_Zlotych_rotation.jpg,10k_Zlotych,rotation,10k_Zlotych,500k_Zaire,10k_Zlotych,10k_Zlotych,141,0,0.9935,418.4,1.0,inconnu,0.5923
+0260_10k_Zlotych_perspective.jpg,10k_Zlotych,perspective,10k_Zlotych,1000_Kronen,10k_Zlotych,10k_Zlotych,169,0,0.9897,453.9,1.0,1_million_Lira,0.5183
+0261_10k_Zlotych_perspective.jpg,10k_Zlotych,perspective,10k_Zlotych,,10k_Zlotych,10k_Zlotych,66,0,0.9889,431.7,1.0,1_million_Intis,0.3121
+0262_10k_Zlotych_perspective.jpg,10k_Zlotych,perspective,10k_Zlotych,,10k_Zlotych,10k_Zlotych,95,0,0.9806,520.7,1.0,inconnu,0.5073
+0263_10k_Zlotych_perspective.jpg,10k_Zlotych,perspective,10k_Zlotych,,10k_Zlotych,10k_Zlotych,114,0,0.9861,523.8,1.0,10k_Zlotych,0.2367
+0264_10k_Zlotych_echelle.jpg,10k_Zlotych,echelle,10k_Zlotych,,10k_Zlotych,10k_Zlotych,37,0,0.9812,399.6,1.0,10k_Zlotych,0.6488
+0265_10k_Zlotych_echelle.jpg,10k_Zlotych,echelle,10k_Zlotych,,10k_Zlotych,10k_Zlotych,12,0,0.9341,325.1,1.0,inconnu,1.3607
+0266_10k_Zlotych_echelle.jpg,10k_Zlotych,echelle,10k_Zlotych,,10k_Zlotych,10k_Zlotych,40,0,0.9857,419.5,1.0,100k_Zaire,0.4354
+0267_10k_Zlotych_echelle.jpg,10k_Zlotych,echelle,10k_Zlotych,,10k_Zlotych,10k_Zlotych,77,0,0.9876,380.3,1.0,100_Billion_Zimbabwe,0.8275
+0268_10k_Zlotych_eclairage.jpg,10k_Zlotych,eclairage,10k_Zlotych,1_billion_Notgeld,10k_Zlotych,10k_Zlotych,168,0,0.9808,469.2,1.0,1_million_Intis,0.924
+0269_10k_Zlotych_eclairage.jpg,10k_Zlotych,eclairage,10k_Zlotych,,10k_Zlotych,10k_Zlotych,175,0,0.9932,477.5,1.0,1000_Cruzados,0.9776
+0270_10k_Zlotych_eclairage.jpg,10k_Zlotych,eclairage,10k_Zlotych,,10k_Zlotych,10k_Zlotych,345,0,0.9971,441.6,1.0,10k_Liban,0.6717
+0271_10k_Zlotych_eclairage.jpg,10k_Zlotych,eclairage,10k_Zlotych,500k_Zaire,10k_Zlotych,10k_Zlotych,102,0,0.9953,411.7,1.0,10k_Liban,0.4238
+0272_10k_Zlotych_flou.jpg,10k_Zlotych,flou,10k_Zlotych,,10k_Zlotych,10k_Zlotych,45,0,0.8906,423.0,1.0,100_Billion_Zimbabwe,0.6324
+0273_10k_Zlotych_flou.jpg,10k_Zlotych,flou,10k_Zlotych,500k_Zaire,10k_Zlotych,10k_Zlotych,80,0,0.9915,508.7,1.0,500_Angola,0.5486
+0274_10k_Zlotych_flou.jpg,10k_Zlotych,flou,10k_Zlotych,,10k_Zlotych,10k_Zlotych,32,0,0.9603,414.1,1.0,inconnu,0.4892
+0275_10k_Zlotych_flou.jpg,10k_Zlotych,flou,10k_Zlotych,,10k_Zlotych,10k_Zlotych,76,4,0.9855,488.5,1.0,inconnu,0.4584
+0276_10k_Zlotych_occlusion.jpg,10k_Zlotych,occlusion,10k_Zlotych,,10k_Zlotych,10k_Zlotych,50,0,0.991,491.9,1.0,inconnu,0.8333
+0277_10k_Zlotych_occlusion.jpg,10k_Zlotych,occlusion,10k_Zlotych,,10k_Zlotych,10k_Zlotych,30,0,0.9734,442.3,1.0,10k_Zlotych,0.2661
+0278_10k_Zlotych_occlusion.jpg,10k_Zlotych,occlusion,10k_Zlotych,million_mark,10k_Zlotych,10k_Zlotych,19,0,0.9618,414.6,1.0,1_million_bolivar,0.7215
+0279_10k_Zlotych_occlusion.jpg,10k_Zlotych,occlusion,10k_Zlotych,,10k_Zlotych,10k_Zlotych,159,0,0.9981,395.1,1.0,1_million_Lira,0.6352
+0280_10k_Zlotych_froisse.jpg,10k_Zlotych,froisse,10k_Zlotych,,10k_Zlotych,10k_Zlotych,65,0,0.9913,353.3,1.0,inconnu,0.4471
+0281_10k_Zlotych_froisse.jpg,10k_Zlotych,froisse,10k_Zlotych,,10k_Zlotych,10k_Zlotych,34,0,0.9786,402.5,1.0,1_million_Intis,0.2849
+0282_10k_Zlotych_froisse.jpg,10k_Zlotych,froisse,10k_Zlotych,,10k_Zlotych,10k_Zlotych,54,0,0.988,361.5,1.0,inconnu,0.779
+0283_10k_Zlotych_froisse.jpg,10k_Zlotych,froisse,10k_Zlotych,,10k_Zlotych,10k_Zlotych,16,0,0.8702,341.9,1.0,inconnu,0.3964
+0284_10k_Zlotych_compression.jpg,10k_Zlotych,compression,10k_Zlotych,,10k_Zlotych,10k_Zlotych,167,0,0.9843,387.8,1.0,inconnu,0.656
+0285_10k_Zlotych_compression.jpg,10k_Zlotych,compression,10k_Zlotych,,10k_Zlotych,10k_Zlotych,119,0,0.9937,471.7,1.0,200k_nicaragua,0.4873
+0286_10k_Zlotych_compression.jpg,10k_Zlotych,compression,10k_Zlotych,100_billion_mark,10k_Zlotych,10k_Zlotych,216,0,0.9903,429.9,1.0,1_million_bolivar,0.5004
+0287_10k_Zlotych_compression.jpg,10k_Zlotych,compression,10k_Zlotych,,10k_Zlotych,10k_Zlotych,192,0,0.9952,449.4,1.0,10k_Liban,0.6761
+0288_1000_Cruzados_facile.jpg,1000_Cruzados,facile,1000_Cruzados,,1000_Cruzados,1000_Cruzados,664,0,0.991,418.4,1.0,1000_Cruzados,0.2568
+0289_1000_Cruzados_facile.jpg,1000_Cruzados,facile,1000_Cruzados,,1000_Cruzados,1000_Cruzados,681,0,0.9954,373.4,1.0,100_Billion_Zimbabwe,0.9972
+0290_1000_Cruzados_facile.jpg,1000_Cruzados,facile,1000_Cruzados,F2-12 50_Trillions_ZWR,1000_Cruzados,1000_Cruzados,93,4,0.9962,392.4,1.0,1000_Rouble,0.8627
+0291_1000_Cruzados_facile.jpg,1000_Cruzados,facile,1000_Cruzados,,1000_Cruzados,1000_Cruzados,340,0,0.9919,358.2,1.0,inconnu,0.5554
+0292_1000_Cruzados_rotation.jpg,1000_Cruzados,rotation,1000_Cruzados,F2-8 50_cents_ZWN,1000_Cruzados,1000_Cruzados,223,0,0.9887,441.7,1.0,1_million_Intis,0.5724
+0293_1000_Cruzados_rotation.jpg,1000_Cruzados,rotation,1000_Cruzados,100_billion_mark,1000_Cruzados,1000_Cruzados,202,0,0.9921,416.9,1.0,500_Angola,0.5456
+0294_1000_Cruzados_rotation.jpg,1000_Cruzados,rotation,1000_Cruzados,,1000_Cruzados,1000_Cruzados,164,0,0.9892,458.8,1.0,200k_nicaragua,0.5632
+0295_1000_Cruzados_rotation.jpg,1000_Cruzados,rotation,1000_Cruzados,,1000_Cruzados,1000_Cruzados,281,4,0.9937,401.6,1.0,1_million_bolivar,0.5437
+0296_1000_Cruzados_perspective.jpg,1000_Cruzados,perspective,1000_Cruzados,,1000_Cruzados,1000_Cruzados,256,0,0.9847,385.0,1.0,inconnu,0.7665
+0297_1000_Cruzados_perspective.jpg,1000_Cruzados,perspective,1000_Cruzados,10k_Mark,inconnu,inconnu,0,0,,940.5,1.0,inconnu,0.3664
+0298_1000_Cruzados_perspective.jpg,1000_Cruzados,perspective,1000_Cruzados,F2-12 50_Trillions_ZWR,1000_Cruzados,1000_Cruzados,45,0,0.9863,343.2,1.0,1000_Cruzados,0.9394
+0299_1000_Cruzados_perspective.jpg,1000_Cruzados,perspective,1000_Cruzados,,1000_Cruzados,1000_Cruzados,178,0,0.9921,338.6,1.0,500_Angola,0.4995
+0300_1000_Cruzados_echelle.jpg,1000_Cruzados,echelle,1000_Cruzados,,1000_Cruzados,1000_Cruzados,101,0,0.9842,810.0,2.0,inconnu,0.4265
+0301_1000_Cruzados_echelle.jpg,1000_Cruzados,echelle,1000_Cruzados,,1000_Cruzados,1000_Cruzados,98,0,0.9889,980.1,2.0,1000_Cruzados,0.3217
+0302_1000_Cruzados_echelle.jpg,1000_Cruzados,echelle,1000_Cruzados,,1000_Cruzados,1000_Cruzados,37,0,0.9711,410.5,1.0,100_Billion_Zimbabwe,0.4
+0303_1000_Cruzados_echelle.jpg,1000_Cruzados,echelle,1000_Cruzados,,1000_Cruzados,1000_Cruzados,29,0,0.9725,393.6,1.0,1_million_bolivar,0.3715
+0304_1000_Cruzados_eclairage.jpg,1000_Cruzados,eclairage,1000_Cruzados,F2-7 20k_cheque_ZWD,1000_Cruzados,1000_Cruzados,201,0,0.9947,375.2,1.0,200k_nicaragua,1.1915
+0305_1000_Cruzados_eclairage.jpg,1000_Cruzados,eclairage,1000_Cruzados,,1000_Cruzados,1000_Cruzados,241,0,0.9952,366.9,1.0,inconnu,0.6647
+0306_1000_Cruzados_eclairage.jpg,1000_Cruzados,eclairage,1000_Cruzados,,1000_Cruzados,1000_Cruzados,326,0,0.9934,402.3,1.0,1_million_Intis,0.7565
+0307_1000_Cruzados_eclairage.jpg,1000_Cruzados,eclairage,1000_Cruzados,,1000_Cruzados,1000_Cruzados,475,0,0.997,338.5,1.0,inconnu,0.8585
+0308_1000_Cruzados_flou.jpg,1000_Cruzados,flou,1000_Cruzados,500_millions_drachma,1000_Cruzados,1000_Cruzados,38,0,0.959,359.1,1.0,1_million_bolivar,0.4708
+0309_1000_Cruzados_flou.jpg,1000_Cruzados,flou,1000_Cruzados,,1000_Cruzados,1000_Cruzados,176,0,0.9872,384.5,1.0,10k_Zlotych,0.5718
+0310_1000_Cruzados_flou.jpg,1000_Cruzados,flou,1000_Cruzados,,inconnu,1_million_bolivar,4,0,,937.8,2.0,inconnu,0.8962
+0311_1000_Cruzados_flou.jpg,1000_Cruzados,flou,1000_Cruzados,,1000_Cruzados,1000_Cruzados,76,0,0.9771,418.5,1.0,100k_Zaire,0.5411
+0312_1000_Cruzados_occlusion.jpg,1000_Cruzados,occlusion,1000_Cruzados,,1000_Cruzados,1000_Cruzados,304,0,0.9959,480.4,1.0,1_million_bolivar,0.6997
+0313_1000_Cruzados_occlusion.jpg,1000_Cruzados,occlusion,1000_Cruzados,,1000_Cruzados,1000_Cruzados,93,0,0.9874,376.3,1.0,500_Angola,0.6455
+0314_1000_Cruzados_occlusion.jpg,1000_Cruzados,occlusion,1000_Cruzados,F2-9 5_Billions_ZWN,1000_Cruzados,1000_Cruzados,164,0,0.9985,378.2,1.0,1000_Cruzados,0.9958
+0315_1000_Cruzados_occlusion.jpg,1000_Cruzados,occlusion,1000_Cruzados,,1000_Cruzados,1000_Cruzados,185,0,0.9948,351.4,1.0,inconnu,0.6896
+0316_1000_Cruzados_froisse.jpg,1000_Cruzados,froisse,1000_Cruzados,,1000_Cruzados,1000_Cruzados,52,0,0.9814,394.9,1.0,inconnu,0.5463
+0317_1000_Cruzados_froisse.jpg,1000_Cruzados,froisse,1000_Cruzados,,1000_Cruzados,1000_Cruzados,32,0,0.969,426.1,1.0,inconnu,0.4819
+0318_1000_Cruzados_froisse.jpg,1000_Cruzados,froisse,1000_Cruzados,,1000_Cruzados,1000_Cruzados,73,0,0.9478,361.9,1.0,inconnu,0.5006
+0319_1000_Cruzados_froisse.jpg,1000_Cruzados,froisse,1000_Cruzados,,1000_Cruzados,1000_Cruzados,9,0,0.9495,480.7,1.0,inconnu,0.2687
+0320_1000_Cruzados_compression.jpg,1000_Cruzados,compression,1000_Cruzados,,1000_Cruzados,1000_Cruzados,209,0,0.9948,523.4,1.0,200k_nicaragua,0.5598
+0321_1000_Cruzados_compression.jpg,1000_Cruzados,compression,1000_Cruzados,,1000_Cruzados,1000_Cruzados,53,6,0.9639,427.0,1.0,inconnu,0.4656
+0322_1000_Cruzados_compression.jpg,1000_Cruzados,compression,1000_Cruzados,,1000_Cruzados,1000_Cruzados,83,0,0.989,333.2,1.0,1000_Rouble,0.4588
+0323_1000_Cruzados_compression.jpg,1000_Cruzados,compression,1000_Cruzados,,1000_Cruzados,1000_Cruzados,129,0,0.994,337.5,1.0,1_million_Intis,0.6612
+0324_1_million_Intis_facile.jpg,1_million_Intis,facile,1_million_Intis,1_millard_MilPengo,1_million_Intis,1_million_Intis,518,0,0.9948,446.2,1.0,1000_Rouble,0.5513
+0325_1_million_Intis_facile.jpg,1_million_Intis,facile,1_million_Intis,,1_million_Intis,1_million_Intis,620,0,0.9931,496.2,1.0,1_million_Lira,1.1617
+0326_1_million_Intis_facile.jpg,1_million_Intis,facile,1_million_Intis,,1_million_Intis,1_million_Intis,590,4,0.9962,598.3,1.0,1000_Rouble,0.6451
+0327_1_million_Intis_facile.jpg,1_million_Intis,facile,1_million_Intis,,1_million_Intis,1_million_Intis,568,0,0.9994,486.4,1.0,100k_Zaire,0.7343
+0328_1_million_Intis_rotation.jpg,1_million_Intis,rotation,1_million_Intis,,1_million_Intis,1_million_Intis,456,0,0.9985,521.2,1.0,inconnu,0.4297
+0329_1_million_Intis_rotation.jpg,1_million_Intis,rotation,1_million_Intis,,1_million_Intis,1_million_Intis,249,0,0.9907,413.0,1.0,10k_Zlotych,0.6632
+0330_1_million_Intis_rotation.jpg,1_million_Intis,rotation,1_million_Intis,5_milliard_dinar,1_million_Intis,1_million_Intis,173,0,0.9884,477.6,1.0,100k_Zaire,0.6849
+0331_1_million_Intis_rotation.jpg,1_million_Intis,rotation,1_million_Intis,,1_million_Intis,1_million_Intis,431,0,0.9949,519.2,1.0,500_Angola,0.4319
+0332_1_million_Intis_perspective.jpg,1_million_Intis,perspective,1_million_Intis,,1_million_Intis,1_million_Intis,164,0,0.9855,436.2,1.0,10k_Zlotych,0.5329
+0333_1_million_Intis_perspective.jpg,1_million_Intis,perspective,1_million_Intis,500_millions_zimbabwe,1_million_Intis,1_million_Intis,295,0,0.9872,752.7,1.0,500_Angola,0.6243
+0334_1_million_Intis_perspective.jpg,1_million_Intis,perspective,1_million_Intis,,1_million_Intis,1_million_Intis,234,0,0.9959,431.4,1.0,1000_Cruzados,1.1062
+0335_1_million_Intis_perspective.jpg,1_million_Intis,perspective,1_million_Intis,million_mark,1_million_Intis,1_million_Intis,192,0,0.9944,582.7,1.0,inconnu,0.3702
+0336_1_million_Intis_echelle.jpg,1_million_Intis,echelle,1_million_Intis,F2-12 50_Trillions_ZWR,inconnu,inconnu,0,0,,1095.6,1.0,100k_Zaire,0.4516
+0337_1_million_Intis_echelle.jpg,1_million_Intis,echelle,1_million_Intis,,1_million_Intis,1_million_Intis,66,0,0.918,411.2,1.0,inconnu,0.5311
+0338_1_million_Intis_echelle.jpg,1_million_Intis,echelle,1_million_Intis,,1_million_Intis,1_million_Intis,50,0,0.9792,1023.6,2.0,inconnu,0.7641
+0339_1_million_Intis_echelle.jpg,1_million_Intis,echelle,1_million_Intis,2000_millions_drachma,1_million_Intis,1_million_Intis,15,0,0.9504,800.1,2.0,100k_Zaire,0.5393
+0340_1_million_Intis_eclairage.jpg,1_million_Intis,eclairage,1_million_Intis,,1_million_Intis,1_million_Intis,221,0,0.9954,581.2,1.0,inconnu,0.6793
+0341_1_million_Intis_eclairage.jpg,1_million_Intis,eclairage,1_million_Intis,F2-12 50_Trillions_ZWR,1_million_Intis,1_million_Intis,56,0,0.9788,417.8,1.0,1000_Rouble,0.7913
+0342_1_million_Intis_eclairage.jpg,1_million_Intis,eclairage,1_million_Intis,,1_million_Intis,1_million_Intis,358,0,0.9981,469.2,1.0,inconnu,0.819
+0343_1_million_Intis_eclairage.jpg,1_million_Intis,eclairage,1_million_Intis,,1_million_Intis,1_million_Intis,425,0,0.9929,580.8,1.0,inconnu,0.7172
+0344_1_million_Intis_flou.jpg,1_million_Intis,flou,1_million_Intis,,1_million_Intis,1_million_Intis,80,4,0.9884,531.4,1.0,inconnu,0.5615
+0345_1_million_Intis_flou.jpg,1_million_Intis,flou,1_million_Intis,,1_million_Intis,1_million_Intis,47,0,0.9791,658.8,1.0,1_million_bolivar,0.4673
+0346_1_million_Intis_flou.jpg,1_million_Intis,flou,1_million_Intis,,1_million_Intis,1_million_Intis,66,0,0.8917,582.7,1.0,200k_nicaragua,0.5907
+0347_1_million_Intis_flou.jpg,1_million_Intis,flou,1_million_Intis,500_millions_zimbabwe,1_million_Intis,1_million_Intis,47,4,0.9797,505.4,1.0,inconnu,0.7395
+0348_1_million_Intis_occlusion.jpg,1_million_Intis,occlusion,1_million_Intis,,1_million_Intis,1_million_Intis,145,0,0.9967,439.9,1.0,1000_Cruzados,0.4945
+0349_1_million_Intis_occlusion.jpg,1_million_Intis,occlusion,1_million_Intis,,1_million_Intis,1_million_Intis,13,0,0.4845,466.0,1.0,inconnu,0.4421
+0350_1_million_Intis_occlusion.jpg,1_million_Intis,occlusion,1_million_Intis,,1_million_Intis,1_million_Intis,76,0,0.9905,402.6,1.0,200k_nicaragua,0.5354
+0351_1_million_Intis_occlusion.jpg,1_million_Intis,occlusion,1_million_Intis,,1_million_Intis,1_million_Intis,13,0,0.2922,481.8,1.0,100_Billion_Zimbabwe,0.5837
+0352_1_million_Intis_froisse.jpg,1_million_Intis,froisse,1_million_Intis,10k_Mark,1_million_Intis,1_million_Intis,86,0,0.9878,504.9,1.0,1_million_Lira,0.4462
+0353_1_million_Intis_froisse.jpg,1_million_Intis,froisse,1_million_Intis,,1_million_Intis,1_million_Intis,25,4,0.9859,374.6,1.0,1000_Rouble,0.6123
+0354_1_million_Intis_froisse.jpg,1_million_Intis,froisse,1_million_Intis,10k_Mark,1_million_Intis,1_million_Intis,15,0,0.9421,370.5,1.0,1_million_Intis,0.4807
+0355_1_million_Intis_froisse.jpg,1_million_Intis,froisse,1_million_Intis,10k_Mark,1_million_Intis,1_million_Intis,21,0,0.987,427.6,1.0,500_Angola,0.6197
+0356_1_million_Intis_compression.jpg,1_million_Intis,compression,1_million_Intis,,1_million_Intis,1_million_Intis,185,0,0.9945,435.5,1.0,200k_nicaragua,0.6776
+0357_1_million_Intis_compression.jpg,1_million_Intis,compression,1_million_Intis,,1_million_Intis,1_million_Intis,256,0,0.9903,517.1,1.0,1_million_bolivar,0.5117
+0358_1_million_Intis_compression.jpg,1_million_Intis,compression,1_million_Intis,1_billion_Notgeld,1_million_Intis,1_million_Intis,114,4,0.9743,436.9,1.0,10k_Liban,0.6249
+0359_1_million_Intis_compression.jpg,1_million_Intis,compression,1_million_Intis,2000_millions_drachma,1_million_Intis,1_million_Intis,71,0,0.9767,524.7,1.0,inconnu,0.5926
+0360_1_million_Lira_facile.jpg,1_million_Lira,facile,1_million_Lira,,1_million_Lira,1_million_Lira,252,0,0.9982,413.1,1.0,1_million_Lira,0.8511
+0361_1_million_Lira_facile.jpg,1_million_Lira,facile,1_million_Lira,,1_million_Lira,1_million_Lira,506,0,0.9974,481.8,1.0,200k_nicaragua,0.5764
+0362_1_million_Lira_facile.jpg,1_million_Lira,facile,1_million_Lira,,1_million_Lira,1_million_Lira,325,0,0.9982,480.5,1.0,inconnu,0.5231
+0363_1_million_Lira_facile.jpg,1_million_Lira,facile,1_million_Lira,500_millions_drachma,1_million_Lira,1_million_Lira,710,0,0.9988,641.5,1.0,inconnu,0.611
+0364_1_million_Lira_rotation.jpg,1_million_Lira,rotation,1_million_Lira,100_billion_mark,1_million_Lira,1_million_Lira,392,0,0.9864,600.8,1.0,1000_Cruzados,0.5687
+0365_1_million_Lira_rotation.jpg,1_million_Lira,rotation,1_million_Lira,,1_million_Lira,1_million_Lira,478,0,0.9966,545.6,1.0,1_million_Lira,0.4207
+0366_1_million_Lira_rotation.jpg,1_million_Lira,rotation,1_million_Lira,,1_million_Lira,1_million_Lira,436,0,0.9968,451.7,1.0,100k_Zaire,0.544
+0367_1_million_Lira_rotation.jpg,1_million_Lira,rotation,1_million_Lira,,1_million_Lira,1_million_Lira,347,0,0.9959,393.8,1.0,1_million_Intis,0.3836
+0368_1_million_Lira_perspective.jpg,1_million_Lira,perspective,1_million_Lira,,inconnu,inconnu,0,0,,1113.1,1.0,1_million_Intis,0.569
+0369_1_million_Lira_perspective.jpg,1_million_Lira,perspective,1_million_Lira,,1_million_Lira,1_million_Lira,226,0,0.995,477.4,1.0,1_million_Lira,0.3714
+0370_1_million_Lira_perspective.jpg,1_million_Lira,perspective,1_million_Lira,,1_million_Lira,1_million_Lira,181,0,0.9937,615.4,1.0,1_million_Lira,0.1845
+0371_1_million_Lira_perspective.jpg,1_million_Lira,perspective,1_million_Lira,,1_million_Lira,1_million_Lira,104,0,0.9968,637.6,1.0,inconnu,0.448
+0372_1_million_Lira_echelle.jpg,1_million_Lira,echelle,1_million_Lira,F2-12 50_Trillions_ZWR,1_million_Lira,1_million_Lira,24,0,0.9737,1157.7,2.0,500_Angola,0.6818
+0373_1_million_Lira_echelle.jpg,1_million_Lira,echelle,1_million_Lira,1_millard_MilPengo,1_million_Lira,1_million_Lira,7,0,0.8889,399.4,1.0,inconnu,0.6155
+0374_1_million_Lira_echelle.jpg,1_million_Lira,echelle,1_million_Lira,F2-10 1_ZWR,1_million_Lira,1_million_Lira,28,0,0.9806,1019.1,2.0,100k_Zaire,0.4209
+0375_1_million_Lira_echelle.jpg,1_million_Lira,echelle,1_million_Lira,,1_million_Lira,1_million_Lira,107,0,0.9913,810.2,2.0,1_million_Lira,0.8052
+0376_1_million_Lira_eclairage.jpg,1_million_Lira,eclairage,1_million_Lira,,1_million_Lira,1_million_Lira,484,4,0.9984,423.0,1.0,100_Billion_Zimbabwe,0.858
+0377_1_million_Lira_eclairage.jpg,1_million_Lira,eclairage,1_million_Lira,100_Trillion_Zimbabwe,1_million_Lira,1_million_Lira,405,0,0.9981,566.1,1.0,inconnu,0.7043
+0378_1_million_Lira_eclairage.jpg,1_million_Lira,eclairage,1_million_Lira,,1_million_Lira,1_million_Lira,350,0,0.9976,658.8,1.0,inconnu,1.0643
+0379_1_million_Lira_eclairage.jpg,1_million_Lira,eclairage,1_million_Lira,,1_million_Lira,1_million_Lira,232,0,0.9969,628.0,1.0,200k_nicaragua,0.93
+0380_1_million_Lira_flou.jpg,1_million_Lira,flou,1_million_Lira,,1_million_Lira,1_million_Lira,46,0,0.9824,589.2,1.0,1_million_Lira,0.4023
+0381_1_million_Lira_flou.jpg,1_million_Lira,flou,1_million_Lira,,1_million_Lira,1_million_Lira,27,0,0.9478,474.3,1.0,inconnu,0.4841
+0382_1_million_Lira_flou.jpg,1_million_Lira,flou,1_million_Lira,1_millard_MilPengo,1_million_Lira,1_million_Lira,154,4,0.9728,511.1,1.0,200k_nicaragua,0.6597
+0383_1_million_Lira_flou.jpg,1_million_Lira,flou,1_million_Lira,,1_million_Lira,1_million_Lira,46,5,0.9598,427.6,1.0,1_million_Lira,0.3332
+0384_1_million_Lira_occlusion.jpg,1_million_Lira,occlusion,1_million_Lira,,1_million_Lira,1_million_Lira,193,0,0.9966,498.9,1.0,1000_Cruzados,0.6369
+0385_1_million_Lira_occlusion.jpg,1_million_Lira,occlusion,1_million_Lira,,1_million_Lira,1_million_Lira,64,0,0.995,541.5,1.0,1_million_Lira,0.4252
+0386_1_million_Lira_occlusion.jpg,1_million_Lira,occlusion,1_million_Lira,,1_million_Lira,1_million_Lira,47,0,0.9921,493.2,1.0,1000_Rouble,0.3456
+0387_1_million_Lira_occlusion.jpg,1_million_Lira,occlusion,1_million_Lira,,1_million_Lira,1_million_Lira,102,0,0.9906,459.7,1.0,inconnu,0.5842
+0388_1_million_Lira_froisse.jpg,1_million_Lira,froisse,1_million_Lira,,1_million_Lira,1_million_Lira,19,0,0.9304,935.9,2.0,200k_nicaragua,0.4846
+0389_1_million_Lira_froisse.jpg,1_million_Lira,froisse,1_million_Lira,,1_million_Lira,1_million_Lira,9,0,0.7503,588.3,1.0,10k_Liban,0.5594
+0390_1_million_Lira_froisse.jpg,1_million_Lira,froisse,1_million_Lira,,1_million_Lira,1_million_Lira,24,5,0.9632,403.2,1.0,1_million_Intis,0.5383
+0391_1_million_Lira_froisse.jpg,1_million_Lira,froisse,1_million_Lira,F2-10 1_ZWR,1_million_Lira,1_million_Lira,73,0,0.9923,468.0,1.0,inconnu,0.5932
+0392_1_million_Lira_compression.jpg,1_million_Lira,compression,1_million_Lira,100_Trillion_Zimbabwe,1_million_Lira,1_million_Lira,229,0,0.9961,430.5,1.0,inconnu,0.8478
+0393_1_million_Lira_compression.jpg,1_million_Lira,compression,1_million_Lira,,1_million_Lira,1_million_Lira,136,0,0.9863,356.4,1.0,200k_nicaragua,0.4799
+0394_1_million_Lira_compression.jpg,1_million_Lira,compression,1_million_Lira,,1_million_Lira,1_million_Lira,201,0,0.9902,627.1,1.0,1_million_bolivar,0.5493
+0395_1_million_Lira_compression.jpg,1_million_Lira,compression,1_million_Lira,,1_million_Lira,1_million_Lira,136,0,0.9878,538.6,1.0,1_million_bolivar,0.621
+0396_100_milliards_Drachma_facile.jpg,100_milliards_Drachma,facile,100_milliards_Drachma,100_billion_mark,100_milliards_Drachma,100_milliards_Drachma,299,0,0.9936,527.2,1.0,500_Angola,0.5212
+0397_100_milliards_Drachma_facile.jpg,100_milliards_Drachma,facile,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,470,0,0.9967,400.9,1.0,1000_Cruzados,0.7541
+0398_100_milliards_Drachma_facile.jpg,100_milliards_Drachma,facile,100_milliards_Drachma,50_millards_dinar,100_milliards_Drachma,100_milliards_Drachma,306,0,0.9981,537.3,1.0,100_milliards_Drachma,0.4105
+0399_100_milliards_Drachma_facile.jpg,100_milliards_Drachma,facile,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,417,5,0.9975,440.0,1.0,1000_Cruzados,0.7631
+0400_100_milliards_Drachma_rotation.jpg,100_milliards_Drachma,rotation,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,524,0,0.9942,383.7,1.0,10k_Zlotych,0.6202
+0401_100_milliards_Drachma_rotation.jpg,100_milliards_Drachma,rotation,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,223,0,0.9929,508.0,1.0,inconnu,0.4846
+0402_100_milliards_Drachma_rotation.jpg,100_milliards_Drachma,rotation,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,573,0,0.9963,468.3,1.0,200k_nicaragua,0.6728
+0403_100_milliards_Drachma_rotation.jpg,100_milliards_Drachma,rotation,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,105,0,0.9873,424.1,1.0,1000_Cruzados,0.6688
+0404_100_milliards_Drachma_perspective.jpg,100_milliards_Drachma,perspective,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,176,0,0.993,406.5,1.0,500_Angola,0.5623
+0405_100_milliards_Drachma_perspective.jpg,100_milliards_Drachma,perspective,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,52,5,0.9827,611.2,1.0,100_milliards_Drachma,0.6311
+0406_100_milliards_Drachma_perspective.jpg,100_milliards_Drachma,perspective,100_milliards_Drachma,F2-12 50_Trillions_ZWR,inconnu,inconnu,0,0,,1198.7,1.0,inconnu,1.2337
+0407_100_milliards_Drachma_perspective.jpg,100_milliards_Drachma,perspective,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,108,4,0.9934,581.0,1.0,1_million_Lira,0.5325
+0408_100_milliards_Drachma_echelle.jpg,100_milliards_Drachma,echelle,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,49,0,0.9703,452.5,1.0,1000_Rouble,0.6655
+0409_100_milliards_Drachma_echelle.jpg,100_milliards_Drachma,echelle,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,11,0,0.9406,472.8,1.0,inconnu,0.4037
+0410_100_milliards_Drachma_echelle.jpg,100_milliards_Drachma,echelle,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,32,5,0.9728,363.6,1.0,10k_Liban,0.4765
+0411_100_milliards_Drachma_echelle.jpg,100_milliards_Drachma,echelle,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,13,0,0.9009,365.5,1.0,500_Angola,0.4375
+0412_100_milliards_Drachma_eclairage.jpg,100_milliards_Drachma,eclairage,100_milliards_Drachma,5_milliard_dinar,100_milliards_Drachma,100_milliards_Drachma,160,0,0.9973,444.2,1.0,inconnu,1.2819
+0413_100_milliards_Drachma_eclairage.jpg,100_milliards_Drachma,eclairage,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,80,4,0.9905,377.6,1.0,inconnu,1.0406
+0414_100_milliards_Drachma_eclairage.jpg,100_milliards_Drachma,eclairage,100_milliards_Drachma,F2-7 20k_cheque_ZWD,100_milliards_Drachma,100_milliards_Drachma,72,0,0.9912,411.3,1.0,inconnu,0.6502
+0415_100_milliards_Drachma_eclairage.jpg,100_milliards_Drachma,eclairage,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,448,0,0.9978,445.2,1.0,1_million_bolivar,0.4491
+0416_100_milliards_Drachma_flou.jpg,100_milliards_Drachma,flou,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,34,5,0.9795,423.8,1.0,1_million_bolivar,0.7567
+0417_100_milliards_Drachma_flou.jpg,100_milliards_Drachma,flou,100_milliards_Drachma,million_mark,inconnu,100_milliards_Drachma,6,5,0.9239,1255.5,1.0,inconnu,0.419
+0418_100_milliards_Drachma_flou.jpg,100_milliards_Drachma,flou,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,23,0,0.9873,687.8,1.0,inconnu,0.5243
+0419_100_milliards_Drachma_flou.jpg,100_milliards_Drachma,flou,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,15,0,0.8976,587.9,1.0,10k_Zlotych,0.6845
+0420_100_milliards_Drachma_occlusion.jpg,100_milliards_Drachma,occlusion,100_milliards_Drachma,_million_mark,100_milliards_Drachma,100_milliards_Drachma,160,0,0.9943,700.7,1.0,10k_Zlotych,0.5596
+0421_100_milliards_Drachma_occlusion.jpg,100_milliards_Drachma,occlusion,100_milliards_Drachma,million_mark,100_milliards_Drachma,100_milliards_Drachma,40,4,0.9845,487.1,1.0,1000_Cruzados,0.4229
+0422_100_milliards_Drachma_occlusion.jpg,100_milliards_Drachma,occlusion,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,167,0,0.9978,421.1,1.0,inconnu,0.6684
+0423_100_milliards_Drachma_occlusion.jpg,100_milliards_Drachma,occlusion,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,49,0,0.9912,396.3,1.0,inconnu,0.4541
+0424_100_milliards_Drachma_froisse.jpg,100_milliards_Drachma,froisse,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,17,0,0.9912,575.0,1.0,1_million_bolivar,0.6148
+0425_100_milliards_Drachma_froisse.jpg,100_milliards_Drachma,froisse,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,49,4,0.9944,524.0,1.0,inconnu,0.2945
+0426_100_milliards_Drachma_froisse.jpg,100_milliards_Drachma,froisse,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,9,0,0.9727,426.2,1.0,inconnu,0.3526
+0427_100_milliards_Drachma_froisse.jpg,100_milliards_Drachma,froisse,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,11,0,0.9643,422.4,1.0,10k_Liban,0.596
+0428_100_milliards_Drachma_compression.jpg,100_milliards_Drachma,compression,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,100,0,0.9859,580.1,1.0,inconnu,0.7143
+0429_100_milliards_Drachma_compression.jpg,100_milliards_Drachma,compression,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,103,0,0.9745,532.3,1.0,1000_Cruzados,0.4722
+0430_100_milliards_Drachma_compression.jpg,100_milliards_Drachma,compression,100_milliards_Drachma,,100_milliards_Drachma,100_milliards_Drachma,61,0,0.9794,527.7,1.0,1_million_Intis,0.5839
+0431_100_milliards_Drachma_compression.jpg,100_milliards_Drachma,compression,100_milliards_Drachma,F2-5 1_million_B-Pengo,100_milliards_Drachma,100_milliards_Drachma,18,0,0.9841,463.4,1.0,10k_Zlotych,0.5188
+0432_inconnu_facile.jpg,inconnu,facile,1000_Kronen,,inconnu,500_Angola,4,0,,1396.5,1.0,inconnu,1.2417
+0433_inconnu_rotation.jpg,inconnu,rotation,1000_Kronen,,inconnu,inconnu,0,0,,930.1,1.0,inconnu,0.7504
+0434_inconnu_perspective.jpg,inconnu,perspective,1000_Kronen,,inconnu,inconnu,0,0,,838.4,1.0,1_million_bolivar,0.685
+0435_inconnu_echelle.jpg,inconnu,echelle,1000_Kronen,,inconnu,inconnu,0,0,,1075.4,1.0,inconnu,0.7173
+0436_inconnu_eclairage.jpg,inconnu,eclairage,1000_Kronen,,inconnu,inconnu,0,0,,1006.8,1.0,inconnu,0.7052
+0437_inconnu_flou.jpg,inconnu,flou,1000_Kronen,,inconnu,10k_Zlotych,5,4,,1064.3,2.0,100k_Zaire,0.4295
+0438_inconnu_occlusion.jpg,inconnu,occlusion,1000_Kronen,,inconnu,1_million_Intis,5,0,,947.7,2.0,inconnu,0.5289
+0439_inconnu_froisse.jpg,inconnu,froisse,1000_Kronen,,1000_Cruzados,1000_Cruzados,8,0,,1273.2,2.0,inconnu,0.4937
+0440_inconnu_compression.jpg,inconnu,compression,1000_Kronen,,inconnu,inconnu,0,0,,1081.7,1.0,1_million_bolivar,0.7078
+0441_inconnu_facile.jpg,inconnu,facile,100_Trillion_Zimbabwe,,inconnu,1000_Cruzados,5,0,,1056.5,1.0,inconnu,0.6661
+0442_inconnu_rotation.jpg,inconnu,rotation,100_Trillion_Zimbabwe,,inconnu,500_Angola,4,0,,1177.4,1.0,200k_nicaragua,0.4695
+0443_inconnu_perspective.jpg,inconnu,perspective,100_Trillion_Zimbabwe,,inconnu,inconnu,0,0,,1394.7,1.0,10k_Zlotych,0.6965
+0444_inconnu_echelle.jpg,inconnu,echelle,100_Trillion_Zimbabwe,,inconnu,100_Billion_Zimbabwe,4,0,,1022.6,1.0,10k_Zlotych,0.756
+0445_inconnu_eclairage.jpg,inconnu,eclairage,100_Trillion_Zimbabwe,,inconnu,inconnu,0,0,,1080.8,1.0,1_million_Lira,0.8195
+0446_inconnu_flou.jpg,inconnu,flou,100_Trillion_Zimbabwe,,inconnu,1000_Rouble,5,0,,1123.3,1.0,200k_nicaragua,0.8487
+0447_inconnu_occlusion.jpg,inconnu,occlusion,100_Trillion_Zimbabwe,,inconnu,inconnu,0,0,,1041.3,1.0,1_million_bolivar,0.4909
+0448_inconnu_froisse.jpg,inconnu,froisse,100_Trillion_Zimbabwe,,inconnu,1_million_Lira,4,0,,819.4,1.0,500_Angola,0.5922
+0449_inconnu_compression.jpg,inconnu,compression,100_Trillion_Zimbabwe,,inconnu,1_million_bolivar,4,0,,1137.9,2.0,inconnu,0.6039
+0450_inconnu_facile.jpg,inconnu,facile,100_billion_mark,,inconnu,inconnu,0,0,,1015.9,1.0,100_milliards_Drachma,0.6049
+0451_inconnu_rotation.jpg,inconnu,rotation,100_billion_mark,,inconnu,inconnu,0,0,,1193.5,1.0,inconnu,0.4665
+0452_inconnu_perspective.jpg,inconnu,perspective,100_billion_mark,,inconnu,inconnu,0,0,,925.5,1.0,inconnu,0.4556
+0453_inconnu_echelle.jpg,inconnu,echelle,100_billion_mark,,inconnu,200k_nicaragua,4,4,,1133.4,1.0,inconnu,0.5114
+0454_inconnu_eclairage.jpg,inconnu,eclairage,100_billion_mark,,inconnu,inconnu,0,0,,984.0,1.0,inconnu,1.2232
+0455_inconnu_flou.jpg,inconnu,flou,100_billion_mark,,inconnu,inconnu,0,0,,1097.9,1.0,inconnu,0.3285
+0456_inconnu_occlusion.jpg,inconnu,occlusion,100_billion_mark,,inconnu,inconnu,0,0,,1215.4,1.0,1000_Rouble,0.7007
+0457_inconnu_froisse.jpg,inconnu,froisse,100_billion_mark,,inconnu,inconnu,0,0,,1124.0,1.0,100_Billion_Zimbabwe,0.4681
+0458_inconnu_compression.jpg,inconnu,compression,100_billion_mark,,inconnu,inconnu,0,0,,1066.5,1.0,10k_Zlotych,0.4685
+0459_inconnu_facile.jpg,inconnu,facile,500k_Zaire,,100k_Zaire,100k_Zaire,16,0,,449.4,1.0,inconnu,0.6798
+0460_inconnu_rotation.jpg,inconnu,rotation,500k_Zaire,,100k_Zaire,100k_Zaire,12,0,,1017.9,2.0,100_Billion_Zimbabwe,0.4322
+0461_inconnu_perspective.jpg,inconnu,perspective,500k_Zaire,,100k_Zaire,100k_Zaire,9,0,,1086.4,2.0,200k_nicaragua,0.574
+0462_inconnu_echelle.jpg,inconnu,echelle,500k_Zaire,,inconnu,inconnu,0,0,,737.6,1.0,1000_Cruzados,0.4753
+0463_inconnu_eclairage.jpg,inconnu,eclairage,500k_Zaire,,100k_Zaire,100k_Zaire,8,0,,465.9,1.0,inconnu,0.7151
+0464_inconnu_flou.jpg,inconnu,flou,500k_Zaire,,inconnu,inconnu,0,0,,1085.5,1.0,1_million_bolivar,0.5479
+0465_inconnu_occlusion.jpg,inconnu,occlusion,500k_Zaire,,inconnu,inconnu,0,0,,1091.6,1.0,1000_Rouble,0.585
+0466_inconnu_froisse.jpg,inconnu,froisse,500k_Zaire,,inconnu,1_million_bolivar,4,0,,890.3,1.0,inconnu,0.5566
+0467_inconnu_compression.jpg,inconnu,compression,500k_Zaire,,100k_Zaire,100k_Zaire,8,0,,461.3,1.0,500_Angola,0.8024
+0468_inconnu_facile.jpg,inconnu,facile,10k_Mark,,inconnu,inconnu,0,0,,992.0,1.0,1_million_bolivar,0.7627
+0469_inconnu_rotation.jpg,inconnu,rotation,10k_Mark,,inconnu,1_million_Intis,5,0,,1135.5,2.0,1_million_bolivar,0.6774
+0470_inconnu_perspective.jpg,inconnu,perspective,10k_Mark,,inconnu,1_million_Intis,4,0,,1514.4,1.0,10k_Zlotych,0.8106
+0471_inconnu_echelle.jpg,inconnu,echelle,10k_Mark,,inconnu,inconnu,0,0,,656.1,1.0,10k_Liban,0.6333
+0472_inconnu_eclairage.jpg,inconnu,eclairage,10k_Mark,,inconnu,inconnu,0,0,,1130.2,1.0,inconnu,0.5454
+0473_inconnu_flou.jpg,inconnu,flou,10k_Mark,,inconnu,inconnu,0,0,,1017.4,1.0,1_million_bolivar,0.5756
+0474_inconnu_occlusion.jpg,inconnu,occlusion,10k_Mark,,inconnu,inconnu,0,0,,1135.1,1.0,1_million_bolivar,0.731
+0475_inconnu_froisse.jpg,inconnu,froisse,10k_Mark,,inconnu,inconnu,0,0,,840.0,1.0,1000_Cruzados,0.4767
+0476_inconnu_compression.jpg,inconnu,compression,10k_Mark,,inconnu,200k_nicaragua,5,4,,1192.7,1.0,inconnu,0.5353
+0477_inconnu_facile.jpg,inconnu,facile,1_billion_Notgeld,,inconnu,inconnu,0,0,,1102.8,1.0,10k_Liban,0.4552
+0478_inconnu_rotation.jpg,inconnu,rotation,1_billion_Notgeld,,inconnu,10k_Zlotych,4,0,,1126.8,1.0,1_million_Lira,0.7258
+0479_inconnu_perspective.jpg,inconnu,perspective,1_billion_Notgeld,,inconnu,inconnu,0,0,,905.9,1.0,inconnu,0.3617
+0480_inconnu_echelle.jpg,inconnu,echelle,1_billion_Notgeld,,inconnu,inconnu,0,0,,975.0,1.0,10k_Zlotych,0.8179
+0481_inconnu_eclairage.jpg,inconnu,eclairage,1_billion_Notgeld,,inconnu,inconnu,0,0,,1057.7,1.0,inconnu,0.6528
+0482_inconnu_flou.jpg,inconnu,flou,1_billion_Notgeld,,inconnu,inconnu,0,0,,849.6,1.0,200k_nicaragua,0.7479
+0483_inconnu_occlusion.jpg,inconnu,occlusion,1_billion_Notgeld,,inconnu,inconnu,0,0,,1292.0,1.0,1_million_Intis,0.7018
+0484_inconnu_froisse.jpg,inconnu,froisse,1_billion_Notgeld,,inconnu,1_million_Intis,5,0,,947.5,2.0,inconnu,0.5181
+0485_inconnu_compression.jpg,inconnu,compression,1_billion_Notgeld,,inconnu,inconnu,0,0,,861.7,1.0,500_Angola,0.4607
+0486_inconnu_facile.jpg,inconnu,facile,1_millard_MilPengo,,inconnu,inconnu,0,0,,1087.4,1.0,100k_Zaire,0.5573
+0487_inconnu_rotation.jpg,inconnu,rotation,1_millard_MilPengo,,inconnu,inconnu,0,0,,962.6,1.0,100_Billion_Zimbabwe,0.5383
+0488_inconnu_perspective.jpg,inconnu,perspective,1_millard_MilPengo,,inconnu,inconnu,0,0,,1045.1,1.0,inconnu,0.5383
+0489_inconnu_echelle.jpg,inconnu,echelle,1_millard_MilPengo,,inconnu,inconnu,0,0,,1106.2,1.0,10k_Liban,0.2162
+0490_inconnu_eclairage.jpg,inconnu,eclairage,1_millard_MilPengo,,inconnu,inconnu,0,0,,965.9,1.0,inconnu,0.6705
+0491_inconnu_flou.jpg,inconnu,flou,1_millard_MilPengo,,inconnu,inconnu,0,0,,727.4,1.0,10k_Zlotych,0.8025
+0492_inconnu_occlusion.jpg,inconnu,occlusion,1_millard_MilPengo,,inconnu,1_million_Intis,4,0,,895.8,2.0,inconnu,0.364
+0493_inconnu_froisse.jpg,inconnu,froisse,1_millard_MilPengo,,inconnu,10k_Zlotych,4,0,,1071.1,1.0,1000_Rouble,0.4944
+0494_inconnu_compression.jpg,inconnu,compression,1_millard_MilPengo,,inconnu,inconnu,0,0,,1093.5,1.0,500_Angola,0.7873
+0495_inconnu_facile.jpg,inconnu,facile,2000_millions_drachma,,inconnu,inconnu,0,0,,990.5,1.0,inconnu,0.519
+0496_inconnu_rotation.jpg,inconnu,rotation,2000_millions_drachma,,inconnu,inconnu,0,0,,1135.8,1.0,inconnu,0.3701
+0497_inconnu_perspective.jpg,inconnu,perspective,2000_millions_drachma,,inconnu,inconnu,0,0,,1160.5,1.0,inconnu,0.6653
+0498_inconnu_echelle.jpg,inconnu,echelle,2000_millions_drachma,,inconnu,inconnu,0,0,,821.5,1.0,100_Billion_Zimbabwe,0.4951
+0499_inconnu_eclairage.jpg,inconnu,eclairage,2000_millions_drachma,,inconnu,inconnu,0,0,,1072.6,1.0,inconnu,1.253
+0500_inconnu_flou.jpg,inconnu,flou,2000_millions_drachma,,inconnu,inconnu,0,0,,1045.7,1.0,500_Angola,0.5119
+0501_inconnu_occlusion.jpg,inconnu,occlusion,2000_millions_drachma,,inconnu,inconnu,0,0,,1103.3,1.0,inconnu,0.5946
+0502_inconnu_froisse.jpg,inconnu,froisse,2000_millions_drachma,,inconnu,inconnu,0,0,,1117.5,1.0,10k_Liban,0.5536
+0503_inconnu_compression.jpg,inconnu,compression,2000_millions_drachma,,inconnu,inconnu,0,0,,996.7,1.0,1_million_bolivar,0.7395
+0504_inconnu_facile.jpg,inconnu,facile,500_millions_drachma,,inconnu,inconnu,0,0,,1057.7,1.0,inconnu,0.4818
+0505_inconnu_rotation.jpg,inconnu,rotation,500_millions_drachma,,inconnu,1000_Cruzados,4,0,,1141.4,1.0,1000_Cruzados,0.2709
+0506_inconnu_perspective.jpg,inconnu,perspective,500_millions_drachma,,inconnu,100_milliards_Drachma,4,0,,1437.9,1.0,100_Billion_Zimbabwe,0.3892
+0507_inconnu_echelle.jpg,inconnu,echelle,500_millions_drachma,,inconnu,inconnu,0,0,,1346.9,1.0,200k_nicaragua,0.7274
+0508_inconnu_eclairage.jpg,inconnu,eclairage,500_millions_drachma,,inconnu,inconnu,0,0,,1269.3,1.0,1_million_Intis,0.9956
+0509_inconnu_flou.jpg,inconnu,flou,500_millions_drachma,,inconnu,inconnu,0,0,,1089.5,1.0,inconnu,0.6495
+0510_inconnu_occlusion.jpg,inconnu,occlusion,500_millions_drachma,,inconnu,inconnu,0,0,,1022.8,1.0,inconnu,0.4915
+0511_inconnu_froisse.jpg,inconnu,froisse,500_millions_drachma,,inconnu,inconnu,0,0,,747.0,1.0,inconnu,0.5884
+0512_inconnu_compression.jpg,inconnu,compression,500_millions_drachma,,inconnu,inconnu,0,0,,1205.3,1.0,100k_Zaire,0.5818
+0513_inconnu_facile.jpg,inconnu,facile,500_millions_zimbabwe,,inconnu,inconnu,0,0,,1044.7,1.0,1_million_bolivar,0.743
+0514_inconnu_rotation.jpg,inconnu,rotation,500_millions_zimbabwe,,inconnu,inconnu,0,0,,1310.0,1.0,1000_Rouble,0.9129
+0515_inconnu_perspective.jpg,inconnu,perspective,500_millions_zimbabwe,,inconnu,inconnu,0,0,,1266.2,1.0,1000_Cruzados,0.3789
+0516_inconnu_echelle.jpg,inconnu,echelle,500_millions_zimbabwe,,inconnu,1_million_bolivar,5,0,,1242.2,2.0,200k_nicaragua,0.5359
+0517_inconnu_eclairage.jpg,inconnu,eclairage,500_millions_zimbabwe,,inconnu,inconnu,0,0,,1747.8,1.0,500_Angola,0.6939
+0518_inconnu_flou.jpg,inconnu,flou,500_millions_zimbabwe,,inconnu,inconnu,0,0,,975.0,1.0,inconnu,0.5411
+0519_inconnu_occlusion.jpg,inconnu,occlusion,500_millions_zimbabwe,,inconnu,inconnu,0,0,,1247.2,1.0,1000_Cruzados,0.6259
+0520_inconnu_froisse.jpg,inconnu,froisse,500_millions_zimbabwe,,inconnu,inconnu,0,0,,1252.4,1.0,inconnu,0.5498
+0521_inconnu_compression.jpg,inconnu,compression,500_millions_zimbabwe,,inconnu,inconnu,0,0,,1355.2,1.0,inconnu,0.6615
+0522_inconnu_facile.jpg,inconnu,facile,50_millards_dinar,,inconnu,inconnu,0,0,,1351.8,1.0,100_Billion_Zimbabwe,0.4815
+0523_inconnu_rotation.jpg,inconnu,rotation,50_millards_dinar,,inconnu,inconnu,0,0,,1172.0,1.0,1_million_bolivar,0.405
+0524_inconnu_perspective.jpg,inconnu,perspective,50_millards_dinar,,inconnu,inconnu,0,0,,1224.6,1.0,10k_Zlotych,0.2745
+0525_inconnu_echelle.jpg,inconnu,echelle,50_millards_dinar,,inconnu,inconnu,0,0,,1368.6,1.0,inconnu,0.8962
+0526_inconnu_eclairage.jpg,inconnu,eclairage,50_millards_dinar,,inconnu,inconnu,0,0,,1015.8,1.0,inconnu,0.344
+0527_inconnu_flou.jpg,inconnu,flou,50_millards_dinar,,inconnu,500_Angola,4,0,,972.3,2.0,200k_nicaragua,0.4968
+0528_inconnu_occlusion.jpg,inconnu,occlusion,50_millards_dinar,,inconnu,inconnu,0,0,,946.0,1.0,100_milliards_Drachma,0.5769
+0529_inconnu_froisse.jpg,inconnu,froisse,50_millards_dinar,,inconnu,inconnu,0,0,,968.5,1.0,inconnu,0.4264
+0530_inconnu_compression.jpg,inconnu,compression,50_millards_dinar,,inconnu,inconnu,0,0,,722.8,1.0,inconnu,0.9425
+0531_inconnu_facile.jpg,inconnu,facile,5_milliard_dinar,,inconnu,inconnu,0,0,,1083.6,1.0,10k_Liban,0.4518
+0532_inconnu_rotation.jpg,inconnu,rotation,5_milliard_dinar,,inconnu,inconnu,0,0,,778.3,1.0,1_million_Intis,0.4818
+0533_inconnu_perspective.jpg,inconnu,perspective,5_milliard_dinar,,inconnu,inconnu,0,0,,1126.2,1.0,10k_Liban,0.6342
+0534_inconnu_echelle.jpg,inconnu,echelle,5_milliard_dinar,,inconnu,100_Billion_Zimbabwe,5,0,,975.6,2.0,inconnu,0.6254
+0535_inconnu_eclairage.jpg,inconnu,eclairage,5_milliard_dinar,,inconnu,inconnu,0,0,,965.8,1.0,inconnu,1.2455
+0536_inconnu_flou.jpg,inconnu,flou,5_milliard_dinar,,inconnu,inconnu,0,0,,877.9,1.0,100k_Zaire,0.7995
+0537_inconnu_occlusion.jpg,inconnu,occlusion,5_milliard_dinar,,inconnu,inconnu,0,0,,1077.3,1.0,10k_Zlotych,0.8655
+0538_inconnu_froisse.jpg,inconnu,froisse,5_milliard_dinar,,inconnu,inconnu,0,0,,1050.0,1.0,1_million_bolivar,0.6254
+0539_inconnu_compression.jpg,inconnu,compression,5_milliard_dinar,,inconnu,inconnu,0,0,,981.1,1.0,inconnu,0.7264
+0540_inconnu_facile.jpg,inconnu,facile,F2-10 1_ZWR,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,12,0,,464.0,1.0,inconnu,0.7302
+0541_inconnu_rotation.jpg,inconnu,rotation,F2-10 1_ZWR,,inconnu,1_million_Intis,5,0,,1391.5,1.0,inconnu,0.5232
+0542_inconnu_perspective.jpg,inconnu,perspective,F2-10 1_ZWR,,inconnu,inconnu,0,0,,1055.5,1.0,inconnu,0.7777
+0543_inconnu_echelle.jpg,inconnu,echelle,F2-10 1_ZWR,,inconnu,inconnu,0,0,,1200.3,1.0,1_million_Lira,0.6821
+0544_inconnu_eclairage.jpg,inconnu,eclairage,F2-10 1_ZWR,,inconnu,inconnu,0,0,,1137.5,1.0,inconnu,1.2701
+0545_inconnu_flou.jpg,inconnu,flou,F2-10 1_ZWR,,inconnu,inconnu,0,0,,1366.5,1.0,200k_nicaragua,0.5149
+0546_inconnu_occlusion.jpg,inconnu,occlusion,F2-10 1_ZWR,,inconnu,inconnu,0,0,,1059.8,1.0,inconnu,1.0161
+0547_inconnu_froisse.jpg,inconnu,froisse,F2-10 1_ZWR,,inconnu,inconnu,0,0,,1165.3,1.0,inconnu,0.8325
+0548_inconnu_compression.jpg,inconnu,compression,F2-10 1_ZWR,,inconnu,inconnu,0,0,,1187.2,1.0,100_milliards_Drachma,0.6775
+0549_inconnu_facile.jpg,inconnu,facile,F2-12 50_Trillions_ZWR,,inconnu,inconnu,0,0,,1595.3,1.0,1000_Rouble,0.6474
+0550_inconnu_rotation.jpg,inconnu,rotation,F2-12 50_Trillions_ZWR,,inconnu,inconnu,0,0,,1235.5,1.0,inconnu,0.4757
+0551_inconnu_perspective.jpg,inconnu,perspective,F2-12 50_Trillions_ZWR,,inconnu,inconnu,0,0,,1302.0,1.0,100k_Zaire,0.4122
+0552_inconnu_echelle.jpg,inconnu,echelle,F2-12 50_Trillions_ZWR,,inconnu,inconnu,0,0,,1063.4,1.0,inconnu,0.7517
+0553_inconnu_eclairage.jpg,inconnu,eclairage,F2-12 50_Trillions_ZWR,,inconnu,inconnu,0,0,,1237.8,1.0,inconnu,1.2408
+0554_inconnu_flou.jpg,inconnu,flou,F2-12 50_Trillions_ZWR,,inconnu,inconnu,0,0,,998.0,1.0,100_Billion_Zimbabwe,1.1352
+0555_inconnu_occlusion.jpg,inconnu,occlusion,F2-12 50_Trillions_ZWR,,inconnu,inconnu,0,0,,1034.2,1.0,inconnu,0.4489
+0556_inconnu_froisse.jpg,inconnu,froisse,F2-12 50_Trillions_ZWR,,inconnu,inconnu,0,0,,1129.5,1.0,inconnu,0.3787
+0557_inconnu_compression.jpg,inconnu,compression,F2-12 50_Trillions_ZWR,,inconnu,inconnu,0,0,,1170.4,1.0,1_million_bolivar,0.8618
+0558_inconnu_facile.jpg,inconnu,facile,F2-4 500_millions_mark,,inconnu,inconnu,0,0,,1292.8,1.0,200k_nicaragua,0.5375
+0559_inconnu_rotation.jpg,inconnu,rotation,F2-4 500_millions_mark,,inconnu,10k_Liban,4,0,,1247.7,2.0,1_million_bolivar,0.4539
+0560_inconnu_perspective.jpg,inconnu,perspective,F2-4 500_millions_mark,,inconnu,inconnu,0,0,,927.6,1.0,inconnu,1.1017
+0561_inconnu_echelle.jpg,inconnu,echelle,F2-4 500_millions_mark,,inconnu,inconnu,0,0,,1128.7,1.0,1_million_Lira,0.6316
+0562_inconnu_eclairage.jpg,inconnu,eclairage,F2-4 500_millions_mark,,inconnu,inconnu,0,0,,1020.0,1.0,inconnu,0.5514
+0563_inconnu_flou.jpg,inconnu,flou,F2-4 500_millions_mark,,inconnu,inconnu,0,0,,920.1,1.0,1000_Rouble,0.6096
+0564_inconnu_occlusion.jpg,inconnu,occlusion,F2-4 500_millions_mark,,inconnu,inconnu,0,0,,933.4,1.0,1000_Rouble,0.4142
+0565_inconnu_froisse.jpg,inconnu,froisse,F2-4 500_millions_mark,,inconnu,200k_nicaragua,4,0,,1232.2,2.0,100_Billion_Zimbabwe,0.5047
+0566_inconnu_compression.jpg,inconnu,compression,F2-4 500_millions_mark,,inconnu,inconnu,0,0,,1410.1,1.0,500_Angola,0.6651
+0567_inconnu_facile.jpg,inconnu,facile,F2-5 1_million_B-Pengo,,inconnu,inconnu,0,0,,1032.3,1.0,inconnu,0.7156
+0568_inconnu_rotation.jpg,inconnu,rotation,F2-5 1_million_B-Pengo,,inconnu,inconnu,0,0,,1277.3,1.0,100k_Zaire,0.7453
+0569_inconnu_perspective.jpg,inconnu,perspective,F2-5 1_million_B-Pengo,,inconnu,inconnu,0,0,,1218.9,1.0,10k_Zlotych,0.3816
+0570_inconnu_echelle.jpg,inconnu,echelle,F2-5 1_million_B-Pengo,,inconnu,inconnu,0,0,,866.1,1.0,100_milliards_Drachma,0.4786
+0571_inconnu_eclairage.jpg,inconnu,eclairage,F2-5 1_million_B-Pengo,,inconnu,inconnu,0,0,,1251.2,1.0,1000_Rouble,0.9202
+0572_inconnu_flou.jpg,inconnu,flou,F2-5 1_million_B-Pengo,,inconnu,1000_Cruzados,4,0,,1036.3,2.0,inconnu,0.7678
+0573_inconnu_occlusion.jpg,inconnu,occlusion,F2-5 1_million_B-Pengo,,inconnu,10k_Liban,4,0,,1321.8,2.0,1000_Rouble,0.3077
+0574_inconnu_froisse.jpg,inconnu,froisse,F2-5 1_million_B-Pengo,,inconnu,inconnu,0,0,,1147.7,1.0,inconnu,0.7759
+0575_inconnu_compression.jpg,inconnu,compression,F2-5 1_million_B-Pengo,,inconnu,1_million_Lira,4,0,,1084.4,2.0,inconnu,0.645
+0576_inconnu_facile.jpg,inconnu,facile,F2-7 20k_cheque_ZWD,,inconnu,inconnu,0,0,,1284.6,1.0,1_million_bolivar,0.5878
+0577_inconnu_rotation.jpg,inconnu,rotation,F2-7 20k_cheque_ZWD,,inconnu,100k_Zaire,5,0,,1059.1,1.0,500_Angola,0.5172
+0578_inconnu_perspective.jpg,inconnu,perspective,F2-7 20k_cheque_ZWD,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,7,0,,1161.7,2.0,inconnu,0.5131
+0579_inconnu_echelle.jpg,inconnu,echelle,F2-7 20k_cheque_ZWD,,inconnu,inconnu,0,0,,720.8,1.0,10k_Liban,0.6391
+0580_inconnu_eclairage.jpg,inconnu,eclairage,F2-7 20k_cheque_ZWD,,inconnu,inconnu,0,0,,1158.3,1.0,inconnu,1.1283
+0581_inconnu_flou.jpg,inconnu,flou,F2-7 20k_cheque_ZWD,,inconnu,inconnu,0,0,,1181.3,1.0,inconnu,0.7778
+0582_inconnu_occlusion.jpg,inconnu,occlusion,F2-7 20k_cheque_ZWD,,inconnu,inconnu,0,0,,1046.2,1.0,200k_nicaragua,0.4401
+0583_inconnu_froisse.jpg,inconnu,froisse,F2-7 20k_cheque_ZWD,,inconnu,100_Billion_Zimbabwe,6,0,,1057.8,2.0,1_million_bolivar,0.7319
+0584_inconnu_compression.jpg,inconnu,compression,F2-7 20k_cheque_ZWD,,inconnu,inconnu,0,0,,989.3,1.0,100_Billion_Zimbabwe,0.6157
+0585_inconnu_facile.jpg,inconnu,facile,F2-8 50_cents_ZWN,,inconnu,1_million_Lira,5,0,,1137.5,2.0,inconnu,0.9182
+0586_inconnu_rotation.jpg,inconnu,rotation,F2-8 50_cents_ZWN,,inconnu,inconnu,0,0,,1086.7,1.0,1000_Rouble,0.5572
+0587_inconnu_perspective.jpg,inconnu,perspective,F2-8 50_cents_ZWN,,inconnu,10k_Liban,4,0,,930.0,1.0,200k_nicaragua,0.4931
+0588_inconnu_echelle.jpg,inconnu,echelle,F2-8 50_cents_ZWN,,inconnu,inconnu,0,0,,1057.5,1.0,1000_Rouble,0.431
+0589_inconnu_eclairage.jpg,inconnu,eclairage,F2-8 50_cents_ZWN,,inconnu,inconnu,0,0,,1410.8,1.0,500_Angola,0.6884
+0590_inconnu_flou.jpg,inconnu,flou,F2-8 50_cents_ZWN,,inconnu,inconnu,0,0,,956.6,1.0,10k_Zlotych,0.5894
+0591_inconnu_occlusion.jpg,inconnu,occlusion,F2-8 50_cents_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,7,0,,997.3,2.0,inconnu,0.7016
+0592_inconnu_froisse.jpg,inconnu,froisse,F2-8 50_cents_ZWN,,inconnu,inconnu,0,0,,1068.1,1.0,1000_Cruzados,0.569
+0593_inconnu_compression.jpg,inconnu,compression,F2-8 50_cents_ZWN,,inconnu,inconnu,0,0,,1240.1,1.0,10k_Zlotych,0.6935
+0594_inconnu_facile.jpg,inconnu,facile,F2-9 5_Billions_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,61,0,,532.9,1.0,inconnu,0.6749
+0595_inconnu_rotation.jpg,inconnu,rotation,F2-9 5_Billions_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,35,0,,460.5,1.0,100k_Zaire,0.3723
+0596_inconnu_perspective.jpg,inconnu,perspective,F2-9 5_Billions_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,16,0,,381.1,1.0,inconnu,0.5792
+0597_inconnu_echelle.jpg,inconnu,echelle,F2-9 5_Billions_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,20,0,,1100.2,2.0,inconnu,0.4864
+0598_inconnu_eclairage.jpg,inconnu,eclairage,F2-9 5_Billions_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,70,0,,698.1,1.0,200k_nicaragua,1.2207
+0599_inconnu_flou.jpg,inconnu,flou,F2-9 5_Billions_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,12,0,,719.7,1.0,100_milliards_Drachma,0.7202
+0600_inconnu_occlusion.jpg,inconnu,occlusion,F2-9 5_Billions_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,23,0,,1153.7,2.0,inconnu,0.7095
+0601_inconnu_froisse.jpg,inconnu,froisse,F2-9 5_Billions_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,15,0,,1321.1,2.0,inconnu,0.8379
+0602_inconnu_compression.jpg,inconnu,compression,F2-9 5_Billions_ZWN,,100_Billion_Zimbabwe,100_Billion_Zimbabwe,10,0,,576.2,1.0,1_million_Lira,0.4074
+0603_inconnu_facile.jpg,inconnu,facile,TizMillio_B_Pengo,,inconnu,inconnu,0,0,,1414.7,1.0,inconnu,0.6426
+0604_inconnu_rotation.jpg,inconnu,rotation,TizMillio_B_Pengo,,inconnu,1000_Rouble,5,0,,1319.0,2.0,1000_Rouble,0.3946
+0605_inconnu_perspective.jpg,inconnu,perspective,TizMillio_B_Pengo,,inconnu,inconnu,0,0,,1177.8,1.0,1_million_Intis,0.4609
+0606_inconnu_echelle.jpg,inconnu,echelle,TizMillio_B_Pengo,,inconnu,1_million_bolivar,4,0,,862.4,1.0,inconnu,0.343
+0607_inconnu_eclairage.jpg,inconnu,eclairage,TizMillio_B_Pengo,,inconnu,inconnu,0,0,,1047.8,1.0,inconnu,0.5624
+0608_inconnu_flou.jpg,inconnu,flou,TizMillio_B_Pengo,,inconnu,1000_Cruzados,4,0,,1024.9,1.0,1000_Cruzados,0.399
+0609_inconnu_occlusion.jpg,inconnu,occlusion,TizMillio_B_Pengo,,inconnu,10k_Zlotych,6,0,,1312.6,2.0,inconnu,0.5865
+0610_inconnu_froisse.jpg,inconnu,froisse,TizMillio_B_Pengo,,inconnu,inconnu,0,0,,1362.1,1.0,inconnu,0.7407
+0611_inconnu_compression.jpg,inconnu,compression,TizMillio_B_Pengo,,inconnu,100_milliards_Drachma,4,0,,1231.6,2.0,inconnu,0.6971
+0612_inconnu_facile.jpg,inconnu,facile,_million_mark,,inconnu,inconnu,0,0,,1092.1,1.0,inconnu,0.5236
+0613_inconnu_rotation.jpg,inconnu,rotation,_million_mark,,inconnu,inconnu,0,0,,1236.0,1.0,100_milliards_Drachma,0.5409
+0614_inconnu_perspective.jpg,inconnu,perspective,_million_mark,,inconnu,inconnu,0,0,,944.4,1.0,1000_Cruzados,0.7969
+0615_inconnu_echelle.jpg,inconnu,echelle,_million_mark,,inconnu,inconnu,0,0,,1022.6,1.0,inconnu,0.2746
+0616_inconnu_eclairage.jpg,inconnu,eclairage,_million_mark,,inconnu,inconnu,0,0,,1220.8,1.0,inconnu,0.5951
+0617_inconnu_flou.jpg,inconnu,flou,_million_mark,,inconnu,inconnu,0,0,,1323.5,1.0,100_milliards_Drachma,0.7338
+0618_inconnu_occlusion.jpg,inconnu,occlusion,_million_mark,,inconnu,inconnu,0,0,,1053.0,1.0,100_Billion_Zimbabwe,1.1033
+0619_inconnu_froisse.jpg,inconnu,froisse,_million_mark,,inconnu,100_milliards_Drachma,4,0,,1046.5,1.0,inconnu,0.3202
+0620_inconnu_compression.jpg,inconnu,compression,_million_mark,,inconnu,inconnu,0,0,,827.8,1.0,1_million_bolivar,0.5778
+0621_inconnu_facile.jpg,inconnu,facile,million_mark,,inconnu,1_million_Lira,4,0,,924.3,1.0,10k_Zlotych,0.9537
+0622_inconnu_rotation.jpg,inconnu,rotation,million_mark,,inconnu,100_milliards_Drachma,5,0,,683.0,1.0,100k_Zaire,0.6967
+0623_inconnu_perspective.jpg,inconnu,perspective,million_mark,,inconnu,inconnu,0,0,,1172.8,1.0,inconnu,0.4441
+0624_inconnu_echelle.jpg,inconnu,echelle,million_mark,,inconnu,inconnu,0,0,,1120.3,1.0,200k_nicaragua,0.5826
+0625_inconnu_eclairage.jpg,inconnu,eclairage,million_mark,,inconnu,500_Angola,4,0,,1390.9,1.0,1000_Rouble,0.7157
+0626_inconnu_flou.jpg,inconnu,flou,million_mark,,inconnu,inconnu,0,0,,1080.0,1.0,inconnu,0.5439
+0627_inconnu_occlusion.jpg,inconnu,occlusion,million_mark,,inconnu,inconnu,0,0,,1152.3,1.0,inconnu,0.7135
+0628_inconnu_froisse.jpg,inconnu,froisse,million_mark,,inconnu,inconnu,0,0,,949.2,1.0,1_million_Intis,0.5016
+0629_inconnu_compression.jpg,inconnu,compression,million_mark,,inconnu,inconnu,0,0,,1207.1,1.0,500_Angola,0.6192
+0630_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,757.1,1.0,10k_Liban,0.7325
+0631_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,500_Angola,4,0,,864.3,2.0,inconnu,0.6517
+0632_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,834.5,1.0,500_Angola,0.8966
+0633_inconnu_facile.jpg,inconnu,facile,scene_vide,,inconnu,inconnu,0,0,,1306.4,1.0,inconnu,0.4877
+0634_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,1053.2,1.0,inconnu,0.8248
+0635_inconnu_facile.jpg,inconnu,facile,scene_vide,,inconnu,inconnu,0,0,,993.1,1.0,inconnu,0.3808
+0636_inconnu_eclairage.jpg,inconnu,eclairage,scene_vide,,inconnu,inconnu,0,0,,770.1,1.0,inconnu,0.5652
+0637_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,1_million_Intis,4,0,,1035.7,2.0,100k_Zaire,0.5973
+0638_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,843.3,1.0,inconnu,0.3223
+0639_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,881.9,1.0,inconnu,0.5207
+0640_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,999.8,1.0,200k_nicaragua,0.7686
+0641_inconnu_eclairage.jpg,inconnu,eclairage,scene_vide,,inconnu,inconnu,0,0,,890.2,1.0,inconnu,0.7015
+0642_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,504.5,1.0,1_million_Intis,0.3827
+0643_inconnu_facile.jpg,inconnu,facile,scene_vide,,inconnu,inconnu,0,0,,1075.0,1.0,inconnu,0.6227
+0644_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,916.7,1.0,1_million_bolivar,0.879
+0645_inconnu_facile.jpg,inconnu,facile,scene_vide,,inconnu,inconnu,0,0,,988.4,1.0,inconnu,0.7523
+0646_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,10k_Liban,5,0,,1062.2,2.0,1000_Cruzados,0.6338
+0647_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,866.0,1.0,inconnu,0.5999
+0648_inconnu_eclairage.jpg,inconnu,eclairage,scene_vide,,inconnu,inconnu,0,0,,1045.4,1.0,10k_Zlotych,0.9305
+0649_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,866.6,1.0,inconnu,0.9363
+0650_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,433.6,1.0,inconnu,0.7314
+0651_inconnu_facile.jpg,inconnu,facile,scene_vide,,inconnu,inconnu,0,0,,706.5,1.0,inconnu,0.7156
+0652_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,781.2,1.0,1_million_Lira,0.546
+0653_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,1031.0,1.0,inconnu,0.7878
+0654_inconnu_facile.jpg,inconnu,facile,scene_vide,,inconnu,inconnu,0,0,,1405.5,1.0,100_milliards_Drachma,0.2317
+0655_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,496.1,1.0,1_million_Intis,0.4815
+0656_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,997.7,1.0,200k_nicaragua,0.9126
+0657_inconnu_eclairage.jpg,inconnu,eclairage,scene_vide,,inconnu,inconnu,0,0,,816.8,1.0,inconnu,0.2933
+0658_inconnu_eclairage.jpg,inconnu,eclairage,scene_vide,,inconnu,inconnu,0,0,,706.1,1.0,inconnu,0.7233
+0659_inconnu_eclairage.jpg,inconnu,eclairage,scene_vide,,inconnu,inconnu,0,0,,791.5,1.0,100_milliards_Drachma,1.0143
+0660_inconnu_eclairage.jpg,inconnu,eclairage,scene_vide,,inconnu,inconnu,0,0,,939.2,1.0,200k_nicaragua,1.0614
+0661_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,651.8,1.0,10k_Liban,0.8298
+0662_inconnu_facile.jpg,inconnu,facile,scene_vide,,inconnu,inconnu,0,0,,745.8,1.0,1_million_bolivar,0.8192
+0663_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,763.3,1.0,200k_nicaragua,0.7613
+0664_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,887.3,1.0,inconnu,0.5357
+0665_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,606.1,1.0,inconnu,0.6842
+0666_inconnu_eclairage.jpg,inconnu,eclairage,scene_vide,,inconnu,1_million_bolivar,4,0,,317.4,2.0,inconnu,1.4907
+0667_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,497.8,1.0,100_Billion_Zimbabwe,0.5038
+0668_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,418.1,1.0,inconnu,0.5982
+0669_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,541.8,1.0,inconnu,0.6028
+0670_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,429.9,1.0,inconnu,0.3162
+0671_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,324.4,1.0,inconnu,0.8738
+0672_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,444.9,1.0,inconnu,0.5781
+0673_inconnu_eclairage.jpg,inconnu,eclairage,scene_vide,,inconnu,inconnu,0,0,,363.1,1.0,10k_Liban,0.6796
+0674_inconnu_facile.jpg,inconnu,facile,scene_vide,,inconnu,inconnu,0,0,,464.7,1.0,10k_Liban,0.5888
+0675_inconnu_facile.jpg,inconnu,facile,scene_vide,,inconnu,inconnu,0,0,,440.4,1.0,100k_Zaire,0.606
+0676_inconnu_flou.jpg,inconnu,flou,scene_vide,,inconnu,inconnu,0,0,,408.2,1.0,1_million_Lira,0.5798
+0677_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,100_Billion_Zimbabwe,4,0,,510.3,2.0,100_Billion_Zimbabwe,0.4314
+0678_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,554.1,1.0,inconnu,0.7899
+0679_inconnu_compression.jpg,inconnu,compression,scene_vide,,inconnu,inconnu,0,0,,283.0,1.0,inconnu,0.599

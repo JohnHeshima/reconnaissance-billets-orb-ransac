@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+donnees/billets_publics/*.jpg
+donnees/synthetique/
+donnees/photos/*/
+donnees/references/*.jpg
+sorties_demo/

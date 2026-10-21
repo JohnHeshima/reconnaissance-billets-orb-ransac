@@ -1,0 +1,6 @@
+opencv-python-headless>=4.8
+numpy
+scikit-learn
+scikit-image
+matplotlib
+pandas
