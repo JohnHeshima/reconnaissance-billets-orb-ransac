@@ -1,12 +1,12 @@
 """Protocole expérimental complet : réglage sur la validation, mesure finale sur le test.
 
-Usage : python experiences.py --refs ../donnees/billets_publics --jeux ../donnees/synthetique \
-                              --resultats ../resultats --figures ../figures
+Usage : python experiences.py --donnees ../donnees --jeux ../donnees/synthetique --resultats ../resultats
 
 Étapes
   1. Variante A (ORB + RANSAC) : étude d'ablation sur la validation (ratio de Lowe,
      nombre de points, seuil RANSAC, CLAHE, contrôle géométrique, pyramide), choix du
-     seuil de rejet tau qui maximise le F1 macro de validation.
+     seuil de rejet tau qui maximise le F1 macro de validation ; vérification
+     photométrique (seuil rho sur la corrélation des gradients, réglé avec tau).
   2. Variante B (HSV + LBP + k-NN) : choix de k, des descripteurs et du seuil de
      distance delta sur la même validation.
   3. Évaluation unique sur le jeu de test (billets inconnus jamais vus).
@@ -15,6 +15,7 @@ Usage : python experiences.py --refs ../donnees/billets_publics --jeux ../donnee
 import argparse
 import csv
 import json
+import pickle
 import time
 from multiprocessing import Pool
 from pathlib import Path
@@ -24,7 +25,7 @@ import numpy as np
 from billets import INCONNU, ReconnaisseurHistogrammes, ReconnaisseurORB, charger_image
 from billets.evaluation import decision_seuil, iou_quadrilateres, matrice_confusion, metriques
 from billets.methode_hist import descripteur_histogrammes
-from config_billets import CONNUS
+from config_billets import CONNUS, charger_references
 
 ARGS = None
 _RECO = None
@@ -38,22 +39,47 @@ def lire_manifeste(dossier):
 # ------------------------------------------------------------------ variante A
 def _init_orb(refs, params):
     global _RECO
-    _RECO = ReconnaisseurORB(**params)
-    for c in CONNUS:
-        _RECO.ajouter_reference(c, charger_image(Path(refs) / f"{c}.jpg"))
+    _RECO = charger_references(ReconnaisseurORB(**params), refs, charger_image)
 
 
 def _predire_orb(chemin):
     p = _RECO.predire(charger_image(chemin))
-    return {"classe_brute": p["classe_brute"], "score": p["score"], "second": p["second_score"],
+    return {"classe_brute": p["classe_brute"], "face": p["face"], "score": p["score"], "correlation": p["correlation"], "second": p["second_score"],
             "polygone": None if p["polygone_brut"] is None else p["polygone_brut"].tolist(),
             "temps_ms": p["temps_ms"], "zoom": p.get("zoom", 1.0)}
 
 
 def executer_orb(refs, dossier, lignes, params, n_proc):
-    chemins = [str(Path(dossier) / l["fichier"]) for l in lignes]
-    with Pool(n_proc, initializer=_init_orb, initargs=(refs, params)) as pool:
-        return pool.map(_predire_orb, chemins, chunksize=8)
+    """Prédictions de la variante A sur un jeu ; mises en cache (pour relancer sans tout recalculer)."""
+    cache = Path(dossier) / ".cache_orb.pkl"
+    memo = pickle.load(open(cache, "rb")) if cache.exists() else {}
+    cle = json.dumps(params, sort_keys=True) + "|" + str(len(lignes))
+    if cle not in memo:
+        chemins = [str(Path(dossier) / l["fichier"]) for l in lignes]
+        with Pool(n_proc, initializer=_init_orb, initargs=(refs, params)) as pool:
+            memo[cle] = pool.map(_predire_orb, chemins, chunksize=8)
+        pickle.dump(memo, open(cache, "wb"))
+    return memo[cle]
+
+
+def decision_a(brutes, scores, corr, tau, rho=None):
+    """Décision de la variante A : assez d'inliers et, si rho est fixé, corrélation suffisante."""
+    pred = decision_seuil(brutes, scores, tau)
+    if rho is not None:
+        pred = np.where(np.asarray(corr) >= rho, pred, INCONNU).astype(object)
+    return pred
+
+
+def meilleur_couple(y, brutes, scores, corr, taus, rhos):
+    """(tau, rho) qui maximise le F1 macro de validation ; à égalité, le plus prudent."""
+    best = None
+    for rho in rhos:
+        for t in taus:
+            m = metriques(y, decision_a(brutes, scores, corr, t, rho), CONNUS)
+            cle = (round(m["f1_macro"], 6), t, rho)
+            if best is None or cle > best[0]:
+                best = (cle, t, rho, m)
+    return best[1], best[2], best[3]
 
 
 def meilleur_seuil(y, brutes, scores, candidats, plus_grand_mieux=True):
@@ -67,10 +93,11 @@ def meilleur_seuil(y, brutes, scores, candidats, plus_grand_mieux=True):
     return best[1], best[2]
 
 
-def courbe_seuil(y, brutes, scores, candidats, plus_grand_mieux=True):
+def courbe_seuil(y, brutes, scores, candidats, plus_grand_mieux=True, corr=None, rho=None):
     out = []
     for t in candidats:
-        m = metriques(y, decision_seuil(brutes, scores, t, plus_grand_mieux), CONNUS)
+        pred = decision_seuil(brutes, scores, t, plus_grand_mieux) if corr is None else decision_a(brutes, scores, corr, t, rho)
+        m = metriques(y, pred, CONNUS)
         m["seuil"] = float(t)
         out.append(m)
     return out
@@ -91,7 +118,7 @@ def descripteurs(dossier, lignes, pc, pt, n_proc):
 # ------------------------------------------------------------------ programme principal
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--refs", default="../donnees/billets_publics")
+    ap.add_argument("--donnees", default="../donnees")
     ap.add_argument("--jeux", default="../donnees/synthetique")
     ap.add_argument("--resultats", default="../resultats")
     ap.add_argument("--proc", type=int, default=4)
@@ -120,47 +147,69 @@ def main():
     for nom, delta in variantes:
         params = {**base, **delta}
         t0 = time.time()
-        p = executer_orb(a.refs, jeux / "validation", val, params, a.proc)
+        p = executer_orb(a.donnees, jeux / "validation", val, params, a.proc)
         brutes = np.array([q["classe_brute"] for q in p], dtype=object)
         scores = np.array([q["score"] for q in p], float)
         tau, m = meilleur_seuil(y_val, brutes, scores, taus)
-        ablation.append({"configuration": nom, "tau": tau, **m,
+        ablation.append({"configuration": nom, "tau": tau, "rho": "", **m,
                          "temps_ms": float(np.mean([q["temps_ms"] for q in p]))})
         preds_val[nom] = (p, brutes, scores)
         print(f"[A/val] {nom:28s} tau={tau:3d} F1={m['f1_macro']:.3f} FA={m['taux_fausse_acceptation']:.3f} "
               f"({time.time() - t0:.0f}s)", flush=True)
 
-    # configuration retenue : on garde la référence sauf si une variante gagne plus de
-    # 0,01 de F1 (environ deux photos de validation), écart en dessous duquel la
-    # différence n'est pas significative sur 336 photos
+    # configuration retenue pour la détection et l'appariement : on garde la référence sauf
+    # si une variante gagne plus de 0,01 de F1 (quelques photos de validation) sans
+    # augmenter les fausses acceptations
     choix = ablation[0]
     for r in ablation[1:]:
         if r["f1_macro"] > choix["f1_macro"] + 0.01 and r["taux_fausse_acceptation"] <= choix["taux_fausse_acceptation"]:
             choix = r
     nom_choix = choix["configuration"]
     params_choix = {**base, **dict(variantes)[nom_choix]}
-    tau_a = choix["tau"]
+    tau_a, rho_a = choix["tau"], None
 
-    # relance zoom x2 (dépend de tau, évaluée à part)
-    params_zoom = {**params_choix, "tau": tau_a, "relance_zoom": True}
-    p = executer_orb(a.refs, jeux / "validation", val, params_zoom, a.proc)
+    # étapes de décision, ajoutées à la configuration retenue avec la même règle
+    # 1) vérification photométrique : (tau, rho) réglés ensemble sur les mêmes prédictions
+    p_ch, b_ch, s_ch = preds_val[nom_choix]
+    c_ch = np.array([q["correlation"] for q in p_ch], float)
+    rhos = [round(r, 2) for r in np.arange(0.0, 0.62, 0.02)]
+    tau_v, rho_v, m = meilleur_couple(y_val, b_ch, s_ch, c_ch, taus, rhos)
+    ligne_v = {"configuration": f"{nom_choix} + vérification photométrique", "tau": tau_v, "rho": rho_v, **m,
+               "temps_ms": choix["temps_ms"]}
+    ablation.append(ligne_v)
+    json.dump([{"rho": r, **metriques(y_val, decision_a(b_ch, s_ch, c_ch, tau_v, r), CONNUS)} for r in rhos],
+              open(res / "A_courbe_rho_validation.json", "w"), indent=1)
+    print(f"[A/val] + vérification photométrique tau={tau_v} rho={rho_v} F1={m['f1_macro']:.3f} "
+          f"FA={m['taux_fausse_acceptation']:.3f}", flush=True)
+    # cette étape vise le rejet : on la garde si elle réduit les fausses acceptations
+    # sans faire perdre plus de 0,01 de F1
+    if m["taux_fausse_acceptation"] < choix["taux_fausse_acceptation"] and m["f1_macro"] >= choix["f1_macro"] - 0.01:
+        tau_a, rho_a = tau_v, rho_v
+        nom_choix = ligne_v["configuration"]
+        choix = ligne_v
+
+    # 2) relance zoom x2 (dépend de tau et rho, évaluée à part)
+    params_zoom = {**params_choix, "tau": tau_a, "rho": rho_a, "relance_zoom": True}
+    p = executer_orb(a.donnees, jeux / "validation", val, params_zoom, a.proc)
     brutes = np.array([q["classe_brute"] for q in p], dtype=object)
     scores = np.array([q["score"] for q in p], float)
-    m = metriques(y_val, decision_seuil(brutes, scores, tau_a), CONNUS)
-    ablation.append({"configuration": f"{nom_choix} + relance zoom x2", "tau": tau_a, **m,
+    corr = np.array([q["correlation"] for q in p], float)
+    m = metriques(y_val, decision_a(brutes, scores, corr, tau_a, rho_a), CONNUS)
+    ablation.append({"configuration": f"{nom_choix} + relance zoom x2", "tau": tau_a, "rho": "" if rho_a is None else rho_a, **m,
                      "temps_ms": float(np.mean([q["temps_ms"] for q in p]))})
     print(f"[A/val] relance zoom          F1={m['f1_macro']:.3f}", flush=True)
-    zoom_utile = m["f1_macro"] > choix["f1_macro"] + 0.01
+    zoom_utile = m["f1_macro"] > choix["f1_macro"] + 0.01 and m["taux_fausse_acceptation"] <= choix["taux_fausse_acceptation"]
     if zoom_utile:
         params_choix = params_zoom
     params_choix["tau"] = tau_a
+    params_choix["rho"] = rho_a
 
     with open(res / "A_ablation_validation.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(ablation[0].keys()))
         w.writeheader()
         w.writerows(ablation)
-    p_ref, b_ref, s_ref = preds_val["référence"]
-    json.dump(courbe_seuil(y_val, b_ref, s_ref, taus), open(res / "A_courbe_seuil_validation.json", "w"), indent=1)
+    json.dump(courbe_seuil(y_val, b_ch, s_ch, taus, corr=c_ch, rho=rho_a),
+              open(res / "A_courbe_seuil_validation.json", "w"), indent=1)
 
     # ---------------- 2. variante B : réglage sur la validation
     y_app = np.array([l["classe"] for l in app])
@@ -187,10 +236,11 @@ def main():
     _, nom_b, pc, pt, k_b, delta_b = meilleur_b
 
     # ---------------- 3. test final
-    p_test = executer_orb(a.refs, jeux / "test", test, params_choix, a.proc)
+    p_test = executer_orb(a.donnees, jeux / "test", test, params_choix, a.proc)
     brutes_a = np.array([q["classe_brute"] for q in p_test], dtype=object)
     scores_a = np.array([q["score"] for q in p_test], float)
-    pred_a = decision_seuil(brutes_a, scores_a, tau_a)
+    corr_a = np.array([q["correlation"] for q in p_test], float)
+    pred_a = decision_a(brutes_a, scores_a, corr_a, tau_a, rho_a)
 
     X_app = descripteurs(jeux / "apprentissage_b", app, pc, pt, a.proc)
     X_test = descripteurs(jeux / "test", test, pc, pt, a.proc)
@@ -208,14 +258,14 @@ def main():
     pred_b = np.array([s[0] for s in sorties_b], dtype=object)
 
     lignes = []
-    for l, q, pb, sb in zip(test, p_test, pred_b, sorties_b):
+    for l, q, pa, pb, sb in zip(test, p_test, pred_a, pred_b, sorties_b):
         iou = ""
         if l["classe"] != INCONNU and q["classe_brute"] == l["classe"] and q["polygone"] is not None:
             iou = round(iou_quadrilateres(q["polygone"], json.loads(l["quad"])), 4)
         lignes.append({"fichier": l["fichier"], "vrai": l["classe"], "categorie": l["categorie"],
                        "source": l["source"], "distracteur": l["distracteur"],
-                       "A_pred": decision_seuil([q["classe_brute"]], [q["score"]], tau_a)[0],
-                       "A_brute": q["classe_brute"], "A_inliers": q["score"], "A_second": q["second"],
+                       "A_pred": pa,
+                       "A_brute": q["classe_brute"], "A_face": q["face"], "A_inliers": q["score"], "A_correlation": round(q["correlation"], 4), "A_second": q["second"],
                        "A_iou": iou, "A_temps_ms": round(q["temps_ms"], 1), "A_zoom": q["zoom"],
                        "B_pred": pb, "B_distance": round(sb[1], 4)})
     with open(res / "test_predictions.csv", "w", newline="", encoding="utf-8") as f:
@@ -281,10 +331,10 @@ def main():
         "tailles": {"validation": len(val), "test": len(test), "apprentissage_b": len(app),
                     "test_positifs": int((y_test != INCONNU).sum()), "test_negatifs": int((y_test == INCONNU).sum())},
         "A": {"configuration": nom_choix, "relance_zoom": bool(zoom_utile),
-              "parametres": {k: v for k, v in params_choix.items()}, "tau": tau_a, "test": m_a},
+              "parametres": {k: v for k, v in params_choix.items()}, "tau": tau_a, "rho": rho_a, "test": m_a},
         "B": {"descripteurs": nom_b, "k": k_b, "delta": delta_b, "test": m_b},
         "matrices": {"etiquettes": etiq, "A": cm_a.tolist(), "B": cm_b.tolist()},
-        "courbe_seuil_test_A": courbe_seuil(y_test, brutes_a, scores_a, taus),
+        "courbe_seuil_test_A": courbe_seuil(y_test, brutes_a, scores_a, taus, corr=corr_a, rho=rho_a),
     }
     json.dump(synthese, open(res / "synthese.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False, default=float)
     print(json.dumps({"A": synthese["A"], "B": synthese["B"]}, indent=1, ensure_ascii=False, default=float))

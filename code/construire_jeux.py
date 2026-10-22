@@ -1,11 +1,15 @@
 """Construit les jeux d'images simulées (validation, test, apprentissage de la variante B).
 
-Usage : python construire_jeux.py --refs ../donnees/billets_publics --sortie ../donnees/synthetique
+Usage : python construire_jeux.py --donnees ../donnees --sortie ../donnees/synthetique
 
 Le découpage des billets est fixé dans `config_billets.py` :
-  * CONNUS          : coupures que le système doit reconnaître (une référence chacune) ;
-  * NEG_CALIBRATION : autres billets, vus seulement pendant le réglage des seuils ;
-  * NEG_TEST        : autres billets jamais vus, réservés au test final (monde ouvert).
+  * CONNUS          : coupures en francs congolais à reconnaître, recto et verso ;
+  * NEG_CALIBRATION : billets inconnus vus seulement pendant le réglage des seuils
+                      (50 FC, de même maquette, et 10 billets étrangers) ;
+  * NEG_TEST        : billets inconnus jamais vus, réservés au test final
+                      (100 FC et 200 FC, de même maquette, et 34 billets étrangers).
+Les photos des billets congolais sont simulées à partir des images « sources »,
+distinctes des images de référence chaque fois que la BCC en publie deux versions.
 """
 
 import argparse
@@ -18,23 +22,24 @@ import numpy as np
 
 from billets.pretraitement import charger_image
 from billets.synthese import CATEGORIES, generer_photo
-from config_billets import CONNUS, NEG_CALIBRATION, NEG_TEST
+from config_billets import CONNUS, FACES, NEG_CALIBRATION, NEG_TEST, chemin_source, est_congolais
 
-# nombre de photos par (billet connu, catégorie) / par (billet négatif, catégorie) / scènes vides
+# nombre de photos par (face connue, catégorie) / par (billet étranger, catégorie) /
+# par (face d'une coupure congolaise inconnue, catégorie) / scènes vides
 PLAN = {
-    "validation": {"graine": 101, "pos": 2, "neg": 1, "vides": 30, "negatifs": NEG_CALIBRATION},
-    "test": {"graine": 202, "pos": 4, "neg": 1, "vides": 50, "negatifs": NEG_TEST},
-    "apprentissage_b": {"graine": 303, "pos": 6, "neg": 2, "vides": 30, "negatifs": NEG_CALIBRATION},
+    "validation": {"graine": 101, "pos": 3, "neg": 1, "cousins": 3, "vides": 30, "negatifs": NEG_CALIBRATION},
+    "test": {"graine": 202, "pos": 5, "neg": 1, "cousins": 3, "vides": 50, "negatifs": NEG_TEST},
+    "apprentissage_b": {"graine": 303, "pos": 8, "neg": 2, "cousins": 4, "vides": 30, "negatifs": NEG_CALIBRATION},
 }
 
 
-def construire(refs_dir, sortie, jeux=None):
-    refs_dir, sortie = Path(refs_dir), Path(sortie)
+def construire(donnees, sortie, jeux=None):
+    sortie = Path(sortie)
     cache = {}
 
     def billet(nom):
         if nom not in cache:
-            cache[nom] = charger_image(refs_dir / f"{nom}.jpg")
+            cache[nom] = charger_image(chemin_source(donnees, nom))
         return cache[nom]
 
     for jeu, p in PLAN.items():
@@ -53,14 +58,17 @@ def construire(refs_dir, sortie, jeux=None):
                            "quad": json.dumps(quad.round(1).tolist()) if quad is not None else ""})
 
         for classe in CONNUS:
-            for cat in CATEGORIES:
-                for _ in range(p["pos"]):
-                    d = str(rng.choice(p["negatifs"])) if rng.random() < 0.25 else None
-                    img, quad = generer_photo(rng, billet(classe), cat, billet(d) if d else None)
-                    ecrire(img, classe, cat, quad, classe, d)
+            for face in FACES:
+                source = f"{classe}_{face}"
+                for cat in CATEGORIES:
+                    for _ in range(p["pos"]):
+                        d = str(rng.choice(p["negatifs"])) if rng.random() < 0.25 else None
+                        img, quad = generer_photo(rng, billet(source), cat, billet(d) if d else None)
+                        ecrire(img, classe, cat, quad, source, d)
         for nom in p["negatifs"]:
+            n = p["cousins"] if est_congolais(nom) else p["neg"]
             for cat in CATEGORIES:
-                for _ in range(p["neg"]):
+                for _ in range(n):
                     img, quad = generer_photo(rng, billet(nom), cat)
                     ecrire(img, "inconnu", cat, quad, nom, None)
         for _ in range(p["vides"]):
@@ -77,8 +85,8 @@ def construire(refs_dir, sortie, jeux=None):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--refs", default="../donnees/billets_publics")
+    ap.add_argument("--donnees", default="../donnees")
     ap.add_argument("--sortie", default="../donnees/synthetique")
     ap.add_argument("--jeux", nargs="*")
     a = ap.parse_args()
-    construire(a.refs, a.sortie, a.jeux)
+    construire(a.donnees, a.sortie, a.jeux)

@@ -17,7 +17,7 @@ from skimage.feature import local_binary_pattern  # noqa: E402
 from billets import ReconnaisseurORB, charger_image  # noqa: E402
 from billets.pretraitement import preparer_gris, redimensionner  # noqa: E402
 from billets.synthese import CATEGORIES  # noqa: E402
-from config_billets import CONNUS  # noqa: E402
+from config_billets import CONNUS, FACES, chemin_reference, charger_references  # noqa: E402
 from demo import dessiner_appariements  # noqa: E402
 
 COUL_A, COUL_B = "#2a78d6", "#eb6834"
@@ -46,12 +46,12 @@ def lire_csv(p):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--refs", default="../donnees/billets_publics")
+    ap.add_argument("--donnees", default="../donnees")
     ap.add_argument("--jeux", default="../donnees/synthetique")
     ap.add_argument("--resultats", default="../resultats")
     ap.add_argument("--figures", default="../figures")
     a = ap.parse_args()
-    refs, jeux, res, fig = Path(a.refs), Path(a.jeux), Path(a.resultats), Path(a.figures)
+    donnees, jeux, res, fig = Path(a.donnees), Path(a.jeux), Path(a.resultats), Path(a.figures)
     fig.mkdir(parents=True, exist_ok=True)
     syn = json.load(open(res / "synthese.json", encoding="utf-8"))
     preds = lire_csv(res / "test_predictions.csv")
@@ -59,11 +59,13 @@ def main():
     tau = syn["A"]["tau"]
 
     # 1. billets de référence
-    f, axes = plt.subplots(3, 4, figsize=(11, 4.6))
-    for ax, c in zip(axes.ravel(), CONNUS):
-        ax.imshow(rgb(charger_image(refs / f"{c}.jpg")))
-        ax.set_title(c.replace("_", " "), fontsize=8, fontweight="normal")
-        ax.axis("off")
+    f, axes = plt.subplots(len(CONNUS), 2, figsize=(7.4, 8.6))
+    for ligne, c in zip(axes, CONNUS):
+        for ax, face in zip(ligne, FACES):
+            ax.imshow(rgb(charger_image(chemin_reference(donnees, c, face))))
+            ax.set_title(f"{c[:-2]} FC, {face}", fontsize=8, fontweight="normal")
+            ax.axis("off")
+    f.tight_layout()
     f.savefig(fig / "01_references.png")
     plt.close(f)
 
@@ -81,7 +83,7 @@ def main():
     plt.close(f)
 
     # 3. points ORB sur une référence + descripteurs de la variante B
-    ref = charger_image(refs / "100k_Zaire.jpg")
+    ref = charger_image(chemin_reference(donnees, "1000FC", "recto"))
     petit, _ = redimensionner(ref, 800)
     gris = preparer_gris(petit)
     orb = cv2.ORB_create(nfeatures=2000, scaleFactor=1.2, nlevels=8, edgeThreshold=15, fastThreshold=10)
@@ -115,9 +117,7 @@ def main():
     plt.close(f)
 
     # 5. appariements RANSAC sur deux photos de test difficiles
-    reco = ReconnaisseurORB(**{k: v for k, v in syn["A"]["parametres"].items()})
-    for c in CONNUS:
-        reco.ajouter_reference(c, charger_image(refs / f"{c}.jpg"))
+    reco = charger_references(ReconnaisseurORB(**{k: v for k, v in syn["A"]["parametres"].items()}), donnees, charger_image)
     exemples = [p for p in preds if p["vrai"] == p["A_pred"] != "inconnu" and p["categorie"] in ("perspective", "occlusion")]
     f, axes = plt.subplots(2, 1, figsize=(10, 8.4))
     for ax, ex in zip(axes, [exemples[0], next(e for e in exemples if e["categorie"] == "occlusion")]):
@@ -258,6 +258,47 @@ def main():
         f.tight_layout()
         f.savefig(fig / "12_echecs_a.png")
         plt.close(f)
+    # 13. vérification photométrique : inliers et corrélation des gradients sur le test
+    rho = syn["A"].get("rho")
+    groupes = [("billet connu (bonne coupure)", lambda p: p["vrai"] != "inconnu" and p["A_brute"] == p["vrai"], COUL_A),
+               ("coupure congolaise inconnue (100, 200 FC)", lambda p: p["vrai"] == "inconnu" and p["source"].split("_")[0].endswith("FC"), COUL_B),
+               ("billet étranger ou scène vide", lambda p: p["vrai"] == "inconnu" and not p["source"].split("_")[0].endswith("FC"), "#8a8984")]
+    f, ax = plt.subplots(figsize=(8, 4.4))
+    for nom, cond, coul in groupes:
+        sel = [p for p in preds if cond(p)]
+        ax.scatter([max(1, float(p["A_inliers"])) for p in sel], [float(p["A_correlation"]) for p in sel],
+                   s=10, alpha=0.6, color=coul, label=f"{nom} ({len(sel)})", edgecolors="none")
+    ax.set_xscale("log")
+    ax.axvline(tau, color=ENCRE, lw=1, ls="--")
+    if rho is not None:
+        ax.axhline(rho, color=ENCRE, lw=1, ls=":")
+        ax.text(1.05, rho + 0.015, f"κ = {rho}".replace(".", ","), color=ENCRE, fontsize=8)
+    ax.text(tau * 1.05, 0.95, f"τ = {tau}", color=ENCRE, fontsize=8)
+    ax.set_xlabel("inliers RANSAC de la meilleure référence (échelle log ; 0 ramené à 1)")
+    ax.set_ylabel("corrélation des gradients après redressement")
+    ax.set_ylim(-0.1, 1.0)
+    ax.legend(frameon=False, fontsize=8, loc="lower right")
+    ax.set_title("Décision de la variante A sur le jeu de test")
+    f.savefig(fig / "13_verification_photometrique.png")
+    plt.close(f)
+
+    # 14. pourquoi les coupures de même maquette trompent les inliers
+    brut = ReconnaisseurORB(**{**syn["A"]["parametres"], "tau": 0, "rho": None, "relance_zoom": False})
+    charger_references(brut, donnees, charger_image)
+    cousin = max((p for p in preds if p["source"] in ("100FC_recto", "200FC_recto") and p["categorie"] in ("facile", "rotation")),
+                 key=lambda p: float(p["A_inliers"]))
+    vrai = next(p for p in preds if p["source"] == "500FC_recto" and p["categorie"] == "facile" and not p["distracteur"])
+    f, axes = plt.subplots(2, 1, figsize=(10, 8.4))
+    for ax, ex, titre in ((axes[0], vrai, "billet de 500 FC"), (axes[1], cousin, f"billet de {cousin['source'].split('FC')[0]} FC (inconnu, même maquette)")):
+        img = charger_image(jeux / "test" / ex["fichier"])
+        r = brut.predire(img, details=True)
+        ax.imshow(rgb(dessiner_appariements(img, r, 60)))
+        ax.set_title(f"{titre} : meilleure référence {r['classe_brute']} {r['face']}, {r['score']} inliers, "
+                     f"corrélation {r['correlation']:.2f}".replace(".", ","), fontsize=10)
+        ax.axis("off")
+    f.tight_layout()
+    f.savefig(fig / "14_coupures_meme_maquette.png")
+    plt.close(f)
     print("figures écrites dans", fig)
 
 

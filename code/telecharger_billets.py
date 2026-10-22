@@ -1,4 +1,4 @@
-"""Télécharge les images de billets publics utilisées comme substitut des francs congolais.
+"""Télécharge les images des billets étrangers utilisés comme billets « inconnus ».
 
 Les images proviennent de la collection de David St-Onge publiée par le projet
 « Hyperinflation Archive » (https://github.com/Rogzy-DB/hyperinflation-bank-note).
@@ -14,7 +14,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from config_billets import CONNUS, NEG_CALIBRATION, NEG_TEST
+from config_billets import ETRANGERS_CALIBRATION, ETRANGERS_TEST
 
 VERSION = "73ecc31826e23efeef9edf34f6d38dfc4ca8202a"
 BASE = f"https://raw.githubusercontent.com/Rogzy-DB/hyperinflation-bank-note/{VERSION}/assets/bills/web/"
@@ -26,7 +26,7 @@ def main():
     a = ap.parse_args()
     sortie = Path(a.sortie)
     sortie.mkdir(parents=True, exist_ok=True)
-    for nom in CONNUS + NEG_CALIBRATION + NEG_TEST:
+    for nom in ETRANGERS_CALIBRATION + ETRANGERS_TEST:
         cible = sortie / f"{nom}.jpg"
         if cible.exists():
             continue

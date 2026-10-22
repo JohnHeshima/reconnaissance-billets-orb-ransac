@@ -1,24 +1,40 @@
 source,n,A_acceptes,B_acceptes,A_classes,B_classes
-1000_Kronen,9,1,3,1000_Cruzados,100k_Zaire 1_million_bolivar
-100_Trillion_Zimbabwe,9,0,7,,10k_Zlotych 1_million_Lira 1_million_bolivar 200k_nicaragua 500_Angola
-100_billion_mark,9,0,4,,1000_Rouble 100_Billion_Zimbabwe 100_milliards_Drachma 10k_Zlotych
-500k_Zaire,9,5,6,100k_Zaire,1000_Cruzados 1000_Rouble 100_Billion_Zimbabwe 1_million_bolivar 200k_nicaragua 500_Angola
-10k_Mark,9,0,7,,1000_Cruzados 10k_Liban 10k_Zlotych 1_million_bolivar
-1_billion_Notgeld,9,0,6,,10k_Liban 10k_Zlotych 1_million_Intis 1_million_Lira 200k_nicaragua 500_Angola
-1_millard_MilPengo,9,0,6,,1000_Rouble 100_Billion_Zimbabwe 100k_Zaire 10k_Liban 10k_Zlotych 500_Angola
-2000_millions_drachma,9,0,4,,100_Billion_Zimbabwe 10k_Liban 1_million_bolivar 500_Angola
-500_millions_drachma,9,0,5,,1000_Cruzados 100_Billion_Zimbabwe 100k_Zaire 1_million_Intis 200k_nicaragua
-500_millions_zimbabwe,9,0,6,,1000_Cruzados 1000_Rouble 1_million_bolivar 200k_nicaragua 500_Angola
-50_millards_dinar,9,0,5,,100_Billion_Zimbabwe 100_milliards_Drachma 10k_Zlotych 1_million_bolivar 200k_nicaragua
-5_milliard_dinar,9,0,6,,100k_Zaire 10k_Liban 10k_Zlotych 1_million_Intis 1_million_bolivar
-F2-10 1_ZWR,9,1,3,100_Billion_Zimbabwe,100_milliards_Drachma 1_million_Lira 200k_nicaragua
-F2-12 50_Trillions_ZWR,9,0,4,,1000_Rouble 100_Billion_Zimbabwe 100k_Zaire 1_million_bolivar
-F2-4 500_millions_mark,9,0,7,,1000_Rouble 100_Billion_Zimbabwe 1_million_Lira 1_million_bolivar 200k_nicaragua 500_Angola
-F2-5 1_million_B-Pengo,9,0,5,,1000_Rouble 100_milliards_Drachma 100k_Zaire 10k_Zlotych
-F2-7 20k_cheque_ZWD,9,1,6,100_Billion_Zimbabwe,100_Billion_Zimbabwe 10k_Liban 1_million_bolivar 200k_nicaragua 500_Angola
-F2-8 50_cents_ZWN,9,1,7,100_Billion_Zimbabwe,1000_Cruzados 1000_Rouble 10k_Zlotych 200k_nicaragua 500_Angola
-F2-9 5_Billions_ZWN,9,9,4,100_Billion_Zimbabwe,100_milliards_Drachma 100k_Zaire 1_million_Lira 200k_nicaragua
-TizMillio_B_Pengo,9,0,3,,1000_Cruzados 1000_Rouble 1_million_Intis
-_million_mark,9,0,5,,1000_Cruzados 100_Billion_Zimbabwe 100_milliards_Drachma 1_million_bolivar
-million_mark,9,0,6,,1000_Rouble 100k_Zaire 10k_Zlotych 1_million_Intis 200k_nicaragua 500_Angola
-scene_vide,50,0,23,,1000_Cruzados 100_Billion_Zimbabwe 100_milliards_Drachma 100k_Zaire 10k_Liban 10k_Zlotych 1_million_Intis 1_million_Lira 1_million_bolivar 200k_nicaragua 500_Angola
+100FC_recto,27,13,15,500FC,10000FC 1000FC 20000FC 5000FC 500FC
+100FC_verso,27,7,6,500FC,10000FC 1000FC 5000FC 500FC
+200FC_recto,27,6,11,500FC,10000FC 1000FC 20000FC 5000FC 500FC
+200FC_verso,27,11,13,500FC,1000FC 20000FC 5000FC 500FC
+1000_Kronen,9,0,6,,1000FC 20000FC 500FC
+100_Trillion_Zimbabwe,9,0,5,,1000FC 20000FC 5000FC 500FC
+100_billion_mark,9,0,3,,1000FC 20000FC 5000FC
+500k_Zaire,9,0,5,,1000FC 20000FC 500FC
+10k_Mark,9,0,3,,1000FC 5000FC 500FC
+1_billion_Notgeld,9,0,5,,10000FC 5000FC
+1_millard_MilPengo,9,0,3,,1000FC 5000FC 500FC
+2000_millions_drachma,9,0,4,,20000FC 5000FC
+500_millions_drachma,9,0,2,,1000FC
+500_millions_zimbabwe,9,0,2,,1000FC 500FC
+50_millards_dinar,9,0,6,,1000FC 20000FC 5000FC 500FC
+5_milliard_dinar,9,0,6,,10000FC 20000FC 5000FC
+F2-10 1_ZWR,9,0,4,,10000FC 5000FC
+F2-12 50_Trillions_ZWR,9,0,4,,1000FC 500FC
+F2-4 500_millions_mark,9,0,5,,10000FC 20000FC 5000FC
+F2-5 1_million_B-Pengo,9,0,2,,20000FC 5000FC
+F2-7 20k_cheque_ZWD,9,0,6,,1000FC 20000FC 5000FC 500FC
+F2-8 50_cents_ZWN,9,0,2,,20000FC 500FC
+F2-9 5_Billions_ZWN,9,0,3,,10000FC 500FC
+TizMillio_B_Pengo,9,0,5,,10000FC 5000FC 500FC
+_million_mark,9,0,4,,10000FC 5000FC 500FC
+million_mark,9,0,3,,5000FC
+100k_Zaire,9,0,4,,20000FC 500FC
+100_Billion_Zimbabwe,9,0,5,,10000FC 20000FC 500FC
+1000_Rouble,9,0,3,,1000FC 5000FC 500FC
+500_Angola,9,0,2,,5000FC
+10k_Liban,9,0,5,,10000FC 1000FC 20000FC 5000FC
+1_million_bolivar,9,0,3,,10000FC 5000FC 500FC
+200k_nicaragua,9,0,2,,5000FC
+10k_Zlotych,9,0,2,,20000FC 500FC
+1000_Cruzados,9,0,4,,10000FC 20000FC 5000FC
+1_million_Intis,9,0,2,,1000FC 500FC
+1_million_Lira,9,0,6,,1000FC 5000FC 500FC
+100_milliards_Drachma,9,0,5,,10000FC 5000FC
+scene_vide,50,0,18,,10000FC 1000FC 20000FC 5000FC 500FC

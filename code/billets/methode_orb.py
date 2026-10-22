@@ -14,7 +14,12 @@ Principe
 4. Le score d'une référence est son nombre d'inliers. La coupure retenue est
    celle de la meilleure référence ; si ce score est inférieur au seuil tau,
    la photo est rejetée (« inconnu » : pas un billet connu).
-5. L'homographie projette le contour du billet de référence dans la photo,
+5. Vérification photométrique (optionnelle, seuil rho) : la photo est ramenée
+   dans le repère de la référence par l'homographie inverse, et l'on mesure la
+   corrélation normalisée (ZNCC) des cartes de gradient des deux images. Elle
+   rejette un billet de même maquette (par ex. 50 FC face à 500 FC) dont seules
+   quelques zones communes (en-tête, logo de la BCC) ont été appariées.
+6. L'homographie projette le contour du billet de référence dans la photo,
    ce qui donne aussi sa localisation (évaluée par IoU).
 """
 
@@ -31,7 +36,7 @@ INCONNU = "inconnu"
 class ReconnaisseurORB:
     def __init__(self, n_points=2000, ratio=0.75, seuil_ransac=5.0, tau=15,
                  clahe=True, cote_max_ref=800, cote_max_requete=1024,
-                 controle_geometrique=True, n_niveaux=8, relance_zoom=False):
+                 controle_geometrique=True, n_niveaux=8, relance_zoom=False, rho=None):
         self.n_points = n_points
         self.ratio = ratio
         self.seuil_ransac = seuil_ransac
@@ -41,6 +46,7 @@ class ReconnaisseurORB:
         self.cote_max_requete = cote_max_requete
         self.controle_geometrique = controle_geometrique
         self.relance_zoom = relance_zoom
+        self.rho = rho
         self.orb = cv2.ORB_create(nfeatures=n_points, scaleFactor=1.2, nlevels=n_niveaux,
                                   edgeThreshold=15, patchSize=31, fastThreshold=10)
         self.apparieur = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=False)
@@ -59,6 +65,7 @@ class ReconnaisseurORB:
             "classe": classe, "face": face, "kp": kp, "des": des,
             "coins": np.float32([[0, 0], [w, 0], [w, h], [0, h]]).reshape(-1, 1, 2),
             "image": petit,
+            "gradient": _carte_gradient(gris),
         })
         return len(kp)
 
@@ -67,14 +74,31 @@ class ReconnaisseurORB:
         return sorted({r["classe"] for r in self.references})
 
     # ------------------------------------------------------------------ reconnaissance
-    def extraire(self, img, zoom=1.0):
+    def _preparer(self, img, zoom=1.0):
         petit, f = redimensionner(img, self.cote_max_requete)
         if zoom != 1.0:
             petit = cv2.resize(petit, None, fx=zoom, fy=zoom, interpolation=cv2.INTER_CUBIC)
             f *= zoom
-        gris = preparer_gris(petit, self.clahe)
+        return preparer_gris(petit, self.clahe), f
+
+    def extraire(self, img, zoom=1.0):
+        gris, f = self._preparer(img, zoom)
         kp, des = self.orb.detectAndCompute(gris, None)
         return kp, des, f, gris.shape
+
+    def correlation(self, ref, H, gris):
+        """ZNCC des gradients entre la référence et la photo redressée (zone visible seulement)."""
+        h, w = ref["gradient"].shape
+        Hinv = np.linalg.inv(H)
+        redresse = cv2.warpPerspective(gris, Hinv, (w, h), flags=cv2.INTER_LINEAR)
+        visible = cv2.warpPerspective(np.full(gris.shape, 255, np.uint8), Hinv, (w, h), flags=cv2.INTER_NEAREST)
+        visible = cv2.erode(visible, np.ones((7, 7), np.uint8)) > 0
+        if visible.mean() < 0.2:
+            return 0.0
+        a = _carte_gradient(redresse)[visible]
+        b = ref["gradient"][visible]
+        a, b = a - a.mean(), b - b.mean()
+        return float((a * b).sum() / (np.sqrt((a * a).sum() * (b * b).sum()) + 1e-9))
 
     def comparer(self, ref, kp, des, forme):
         """Appariement + RANSAC contre une référence. Renvoie (inliers, H, détails)."""
@@ -109,7 +133,9 @@ class ReconnaisseurORB:
         return res
 
     def _predire(self, img, zoom, details):
-        kp, des, f, forme = self.extraire(img, zoom)
+        gris, f = self._preparer(img, zoom)
+        kp, des = self.orb.detectAndCompute(gris, None)
+        forme = gris.shape
         scores = {}
         meilleur = (0, None, None, None)
         for ref in self.references:
@@ -120,7 +146,9 @@ class ReconnaisseurORB:
             if n_in > meilleur[0]:
                 meilleur = (n_in, H, ref, info)
         n_in, H, ref, info = meilleur
-        classe = ref["classe"] if (ref is not None and n_in >= self.tau) else INCONNU
+        corr = self.correlation(ref, H, gris) if H is not None else 0.0
+        accepte = ref is not None and n_in >= self.tau and (self.rho is None or corr >= self.rho)
+        classe = ref["classe"] if accepte else INCONNU
         polygone = None
         if ref is not None and H is not None:
             polygone = cv2.perspectiveTransform(ref["coins"], H).reshape(-1, 2) / f
@@ -130,6 +158,7 @@ class ReconnaisseurORB:
             "classe_brute": ref["classe"] if ref is not None else INCONNU,
             "face": ref["face"] if ref is not None else "",
             "score": n_in,
+            "correlation": corr,
             "second_score": tri[1],
             "scores": scores,
             "polygone": polygone if classe != INCONNU else None,
@@ -140,6 +169,12 @@ class ReconnaisseurORB:
         if details:
             res.update({"kp": kp, "facteur": f, "ref": ref, "H": H, "info": info})
         return res
+
+
+def _carte_gradient(gris):
+    """Norme du gradient (Sobel) après un léger lissage, qui atténue bruit et flou de bougé."""
+    g = cv2.GaussianBlur(gris.astype(np.float32), (0, 0), 2.0)
+    return cv2.magnitude(cv2.Sobel(g, cv2.CV_32F, 1, 0), cv2.Sobel(g, cv2.CV_32F, 0, 1))
 
 
 def homographie_plausible(H, coins, forme):

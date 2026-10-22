@@ -1,9 +1,10 @@
 """Démonstration : reconnaître un billet sur une photo (ou en direct à la webcam).
 
 Exemples
-  python demo.py --refs ../donnees/references photo.jpg
-  python demo.py --refs ../donnees/references --appariements photo.jpg   # montre les inliers RANSAC
-  python demo.py --refs ../donnees/references --camera 0                 # webcam (q pour quitter)
+  python demo.py photo.jpg
+  python demo.py --appariements photo.jpg   # montre les inliers RANSAC
+  python demo.py --camera 0                 # webcam (q pour quitter)
+  python demo.py --refs ../donnees/references photo.jpg   # références préparées à partir de vos photos
 
 Le dossier de références contient une image par coupure et par face, nommée
 <coupure>_<face>.jpg (par ex. 1000FC_recto.jpg, 1000FC_verso.jpg) ou <coupure>.jpg.
@@ -58,14 +59,15 @@ def dessiner_appariements(img, res, max_traits=80):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("images", nargs="*")
-    ap.add_argument("--refs", required=True)
-    ap.add_argument("--tau", type=int, default=15, help="nombre minimal d'inliers pour accepter")
+    ap.add_argument("--refs", default="../donnees/billets_cdf/references")
+    ap.add_argument("--tau", type=int, default=8, help="nombre minimal d'inliers pour accepter")
+    ap.add_argument("--rho", type=float, default=0.26, help="corrélation minimale des gradients (vérification photométrique)")
     ap.add_argument("--camera", type=int)
     ap.add_argument("--appariements", action="store_true")
     ap.add_argument("--sortie", default="sorties_demo")
     a = ap.parse_args()
 
-    reco = ReconnaisseurORB(tau=a.tau, relance_zoom=True)
+    reco = ReconnaisseurORB(tau=a.tau, rho=a.rho, n_niveaux=12)
     charger_references(a.refs, reco)
 
     if a.camera is not None:

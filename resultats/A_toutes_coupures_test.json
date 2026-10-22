@@ -1,0 +1,65 @@
+{
+ "test": {
+  "exactitude": 0.9638949671772429,
+  "precision_macro": 1.0,
+  "rappel_macro": 0.9266666666666667,
+  "f1_macro": 0.9616259606646601,
+  "taux_identification": 0.9266666666666666,
+  "taux_confusion": 0.0,
+  "taux_faux_rejet": 0.07333333333333333,
+  "taux_fausse_acceptation": 0.0
+ },
+ "fausse_acceptation_cousins": 0.0,
+ "fausse_acceptation_autres": 0.0,
+ "cousins_reconnus_comme_eux_memes": 0.9722222222222222,
+ "matrice": [
+  [
+   85,
+   0,
+   0,
+   0,
+   0,
+   5
+  ],
+  [
+   0,
+   79,
+   0,
+   0,
+   0,
+   11
+  ],
+  [
+   0,
+   0,
+   82,
+   0,
+   0,
+   8
+  ],
+  [
+   0,
+   0,
+   0,
+   83,
+   0,
+   7
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   88,
+   2
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   464
+  ]
+ ]
+}

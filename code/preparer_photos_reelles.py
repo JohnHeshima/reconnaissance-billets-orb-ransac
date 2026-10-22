@@ -47,8 +47,11 @@ def preparer(photos, refs):
             print(f"{chemin.name} -> {cible.name} ({billet.shape[1]}x{billet.shape[0]})")
 
 
-def evaluer(photos, refs, tau, sortie):
-    reco = ReconnaisseurORB(tau=tau, relance_zoom=True)
+def evaluer(photos, refs, tau, rho, sortie):
+    if not list(refs.glob("*.jpg")):
+        refs = Path("../donnees/billets_cdf/references")
+        print(f"Pas de références photographiées : on utilise les images de la BCC ({refs})")
+    reco = ReconnaisseurORB(tau=tau, rho=rho, n_niveaux=12)
     for chemin in sorted(refs.glob("*.jpg")):
         classe, _, face = chemin.stem.rpartition("_")
         reco.ajouter_reference(classe, charger_image(chemin), face)
@@ -72,7 +75,7 @@ def evaluer(photos, refs, tau, sortie):
         w = csv.DictWriter(f, fieldnames=list(lignes[0].keys()))
         w.writeheader()
         w.writerows(lignes)
-    json.dump({"tau": tau, "n_photos": len(lignes), "metriques": m, "etiquettes": etiq, "matrice": cm.tolist()},
+    json.dump({"tau": tau, "rho": rho, "n_photos": len(lignes), "metriques": m, "etiquettes": etiq, "matrice": cm.tolist()},
               open(sortie / "photos_reelles_synthese.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(json.dumps(m, indent=1))
 
@@ -82,10 +85,11 @@ if __name__ == "__main__":
     ap.add_argument("action", choices=["preparer", "evaluer"])
     ap.add_argument("--photos", default="../donnees/photos")
     ap.add_argument("--refs", default="../donnees/references")
-    ap.add_argument("--tau", type=int, default=15)
+    ap.add_argument("--tau", type=int, default=8)
+    ap.add_argument("--rho", type=float, default=0.26)
     ap.add_argument("--sortie", default="../resultats")
     a = ap.parse_args()
     if a.action == "preparer":
         preparer(Path(a.photos), Path(a.refs))
     else:
-        evaluer(Path(a.photos), Path(a.refs), a.tau, Path(a.sortie))
+        evaluer(Path(a.photos), Path(a.refs), a.tau, a.rho, Path(a.sortie))
